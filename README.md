@@ -27,45 +27,50 @@ Feature 0: login
     
 Feature 1: simple flow to manage restaurants in the system (for a superadmin)
 
-    As a superadmin I want to be able to add new restaurant in db
+    As a superadmin I want to be able to add new restaurant in db so that they can use our service
 
     Acceptance criteria
     City in address fields should be autocomplete fields with list of addresses
     Email to restaurant admin will be send after added restaurant in db
     
-    As a superadmin I want to be able to delete restaurant from db
+    As a superadmin I want to be able to delete restaurant from db that they can't use our service
 
     Acceptance criteria
     Email must be sended to restaurant admin two days before removal
-
-    As a superadmin I want to be able to see orders statistics
-
-    Acceptance criteria
-    Order statistics must includes filter by date and restaurants
     
-    (Nice to have) As a superadmin I want to be able to block restaurant but not delete
+    (Nice to have) As a superadmin I want to be able to block restaurant but not delete so that thay temporarily can't use our service 
     Acceptance criteria
     Email must be sended to restaurant admin that notify about blocked restaurant.
     
 Feature 2: simple flow to manage restaurant (for a restaurant admin)
 
-    As a restaurant admin I want to be able to manage staff (CRUD functinality)
+    As a restaurant admin I want to be able to manage staff (CRUD functinality) so that I can control who uses this sevice
     
     Acceptance criteria
     Email to staff will be send after added their in the system
     
-    As a restaurant admin I want to be able to see orders statistics
+    As a restaurant admin I want to be able to see orders statistics so that I can analyse them and make decisions based on them
     
     Acceptance criteria
     Order statistics must includes filter by date
     
-    As a restaurant admin I want to be able to create menu
+    As a restaurant admin I want to be able to create menu so that our customers can see menu and make orders
             
     Acceptance criteria
     Restaurant can have few versions of menu but only one active.
     
-    As a restaurant admin I want to be able to generate QR-code for each table separately 
+    As a restaurant admin I want to be able to generate QR-code for each table separately so that our users can access this service
             
-    As a restaurant admin I want to be able to manage orders (accept, cancel)                         
+    As a restaurant admin I want to be able to manage orders (accept, cancel) so that we can fulfill orders and get money
+
+    (Nice to have) As a restaurant admin I want to have understandable visual representation of current status of tables so that we can manage restaurant more effectively
+
+Feature 3: simple flow to make an order (for a restaurant customer)
+
+    As customer I want to be able to see restaurant menu without social contact so that I can decide what to order and don't get sick
+
+    As customer I want to be able to make an order and pay for it without social contact so that I eat and don't get sick 
+
+    As customer I want to be able to call a waiter so that I can solve problems which need waiter intervention
     
 Wireframes: https://www.figma.com/file/F6p99BkLdwmAFRdPSFJcbK/Wireframing-in-Figma?node-id=0%3A817
