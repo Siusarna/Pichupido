@@ -12,6 +12,8 @@ Feature 1: simple flow to manage restaurants in the system (for a superadmin)
 
 Feature 2: simple flow to manage restaurant (for a restaurant admin)
 
+Feature 3: simple flow to make an order (for a restaurant customer)
+
 Limitation:
 * only Ukraine
 * dozens of restaurants
@@ -69,7 +71,11 @@ Feature 3: simple flow to make an order (for a restaurant customer)
 
     As customer I want to be able to see restaurant menu without social contact so that I can decide what to order and don't get sick
 
-    As customer I want to be able to make an order and pay for it without social contact so that I eat and don't get sick 
+    As customer I want to be able to make an order for it without social contact so that I can eat and don't get sick
+
+    As customer I want to be able to pay for an order with cash so that I can get my food
+
+    (Nice to have) As customer I want to be able to pay for an order online with this app so that I can get my food
 
     As customer I want to be able to call a waiter so that I can solve problems which need waiter intervention
     
