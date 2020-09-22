@@ -80,3 +80,31 @@ Feature 3: simple flow to make an order (for a restaurant customer)
     As customer I want to be able to call a waiter so that I can solve problems which need waiter intervention
     
 Wireframes: https://www.figma.com/file/F6p99BkLdwmAFRdPSFJcbK/Wireframing-in-Figma?node-id=0%3A817
+
+#Technical stack:
+  ##Backend:
+  * TypeScript
+  * Koa | Nest | Fastify
+  * PostgreSQL
+  * TypeORM
+  * Jest
+  * Stripe
+  * Swagger
+  * REST API
+  
+  ##Frontend:
+  * TypeScript
+  * Vue
+  * HTML5
+  * CSS3
+  * Axios
+  * Stripe
+  
+  ##Deploy:
+  * CircleCI
+  * Docker
+  * Kubernetes
+  * LetsEncrypt
+  
+  ##Web application architecture
+  ![GitHub Logo](/img/Screenshot_12.jpg)
