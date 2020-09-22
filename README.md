@@ -81,8 +81,8 @@ Feature 3: simple flow to make an order (for a restaurant customer)
     
 Wireframes: https://www.figma.com/file/F6p99BkLdwmAFRdPSFJcbK/Wireframing-in-Figma?node-id=0%3A817
 
-#Technical stack:
-  ##Backend:
+# Technical stack:
+  ## Backend:
   * TypeScript
   * Koa | Nest | Fastify
   * PostgreSQL
@@ -92,7 +92,7 @@ Wireframes: https://www.figma.com/file/F6p99BkLdwmAFRdPSFJcbK/Wireframing-in-Fig
   * Swagger
   * REST API
   
-  ##Frontend:
+  ## Frontend:
   * TypeScript
   * Vue
   * HTML5
@@ -100,11 +100,11 @@ Wireframes: https://www.figma.com/file/F6p99BkLdwmAFRdPSFJcbK/Wireframing-in-Fig
   * Axios
   * Stripe
   
-  ##Deploy:
+  ## Deploy:
   * CircleCI
   * Docker
   * Kubernetes
   * LetsEncrypt
   
-  ##Web application architecture
+  ## Web application architecture
   ![GitHub Logo](/img/Screenshot_12.jpg)
