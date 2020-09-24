@@ -108,3 +108,6 @@ Wireframes: https://www.figma.com/file/F6p99BkLdwmAFRdPSFJcbK/Wireframing-in-Fig
   
   ## Web application architecture
   ![GitHub Logo](/img/Screenshot_12.jpg)
+  
+  ## Database Structure
+  ![Database Structure](/img/database_diagram.png)
