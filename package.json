@@ -1,0 +1,33 @@
+{
+  "name": "pichupido",
+  "version": "1.0.0",
+  "description": "Pichupido system - it is web application that will help restaurant create their \r own page with unique design, menu, order system, \r possibility to pay online, call a waiter and feedback system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node build/app.js",
+    "serve": "tsnd --respawn --no-notify --transpile-only src/app.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Siusarna/Pichupido.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Siusarna/Pichupido/issues"
+  },
+  "homepage": "https://github.com/Siusarna/Pichupido#readme",
+  "dependencies": {
+    "koa": "^2.13.0"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.11.4",
+    "ts-node-dev": "^1.0.0-pre.63",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^6.1.3",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^4.0.3"
+  }
+}
