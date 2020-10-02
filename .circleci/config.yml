@@ -48,3 +48,4 @@ workflows:
               - master
         requires:
           - build
+
