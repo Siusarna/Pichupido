@@ -47,6 +47,4 @@ workflows:
   server:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
+      - deploy
