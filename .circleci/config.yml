@@ -2,9 +2,6 @@ version: 2
 
 jobs:
   build:
-    branches:
-      only:
-        - master
     working_directory: ~/circleci-pichupido
     docker:
       - image: circleci/node:12.14.1
