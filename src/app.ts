@@ -5,7 +5,7 @@ export const app = new Koa();
 
 export async function start(app, cb) {
   app.use((ctx: Koa.Context) => {
-    ctx.body = 'Change hello world';
+    ctx.body = 'Hello world from pull request';
   });
 
   const server = createServer(app.callback());
