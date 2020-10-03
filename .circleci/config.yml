@@ -38,23 +38,24 @@ jobs:
             docker push registry.heroku.com/pichupido/pichupido
             apt-get update && apt-get install curl
             curl -X PATCH https://api.heroku.com/apps/pichupido/formation --header "Content-Type: application/json" --header "Accept: application/vnd.heroku+json; version=3.docker-releases" --header "Authorization: Bearer ${HEROKU_TOKEN}" --data '{ "updates": [ { "type": "web", "docker_image": "'$(cat imageid.txt)'" } ] }'
+
 workflows:
   build:
     jobs:
-      - build
-        filters:
-          branches:
-            ignore:
-              - master
-              - dev
-    - build-deploy-prod:
-      jobs:
-        - build:
-            filters:
-              branches:
-                only:
-                  - master
-        - deploy:
-            requires:
-              - build
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
+                - dev
+  build-deploy-prod:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - master
+      - deploy:
+          requires:
+            - build
 
