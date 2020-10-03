@@ -31,6 +31,9 @@ jobs:
       image: ubuntu-2004:202008-01
     steps:
       - run:
+          name: test
+          command: ls
+      - run:
           name: Deploy to Docker Cloud
           command: |
             docker login -u _ -p $HEROKU_TOKEN registry.heroku.com
