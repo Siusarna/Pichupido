@@ -50,10 +50,10 @@ workflows:
     - build-deploy-prod:
       jobs:
         - build:
-          filters:
-            branches:
-              only:
-                - master
+            filters:
+              branches:
+                only:
+                  - master
         - deploy:
             requires:
               - build
