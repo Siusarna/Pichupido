@@ -30,9 +30,7 @@ jobs:
     machine:
       image: ubuntu-2004:202008-01
     steps:
-      - run:
-          name: test
-          command: ls
+      - checkout
       - run:
           name: Deploy to Docker Cloud
           command: |
