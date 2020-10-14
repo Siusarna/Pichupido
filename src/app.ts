@@ -6,15 +6,12 @@ import * as httpLogger from 'koa-logger';
 import * as cors from '@koa/cors';
 import * as helmet from 'koa-helmet';
 import { SwaggerAPI } from 'koa-joi-router-docs';
-import { KoaSwaggerUiOptions } from 'koa2-swagger-ui';
+import { koaSwagger } from 'koa2-swagger-ui';
 import { createServer } from 'http';
 
 import accountsRouter from './accounts/accounts.routers';
 
-type koa2SwaggerUiFunc = (config: Partial<KoaSwaggerUiOptions>) => Koa.Middleware;
-const koaSwagger = require('koa2-swagger-ui') as koa2SwaggerUiFunc;
-
-const databaseConf: any = config.get('database');
+// const databaseConf: any = config.get('database');
 
 import koaPassport from './libs/passport/koaPassport';
 import errorCatcherMiddleware from './middlewares/errorCatcher';
