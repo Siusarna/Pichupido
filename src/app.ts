@@ -1,13 +1,13 @@
-import * as Koa from 'koa';
-import * as Router from 'koa-joi-router';
-import * as config from 'config';
-import * as bodyParser from 'koa-body';
-import * as httpLogger from 'koa-logger';
-import * as cors from '@koa/cors';
-import * as helmet from 'koa-helmet';
+import Koa from 'koa';
+import Router from 'koa-joi-router';
+import config from 'config';
+import bodyParser from 'koa-body';
+import httpLogger from 'koa-logger';
+import cors from '@koa/cors';
+import helmet from 'koa-helmet';
 import { SwaggerAPI } from 'koa-joi-router-docs';
 import { koaSwagger } from 'koa2-swagger-ui';
-import { createServer } from 'http';
+import { createServer, Server } from 'http';
 
 import accountsRouter from './accounts/accounts.routers';
 
@@ -21,7 +21,7 @@ import errorCatcherMiddleware from './middlewares/errorCatcher';
  * because pg driver will trying to change the read-only 'type' property
  */
 export const app = new Koa();
-export async function start(app, cb) {
+export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa> {
   try {
    // await createConnection({ ...databaseConf });
   } catch (error) {

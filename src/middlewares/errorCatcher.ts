@@ -1,9 +1,9 @@
 import * as Koa from 'koa';
-import * as pino from 'pino';
+import pino from 'pino';
 
 const logger = pino({ name: 'server' });
 
-export default async (ctx: Koa.Context, next: () => Promise<any>) => {
+export default async (ctx: Koa.Context, next: () => Promise<void>): Promise<void> => {
   try {
     await next();
   } catch (e) {
@@ -42,6 +42,7 @@ export default async (ctx: Koa.Context, next: () => Promise<any>) => {
           message: string,
         }[] = [];
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         e.forEach((elem: any) => {
           fields.push({
             field: elem.property,

@@ -6,10 +6,10 @@ const opts: IStrategyOptions = {
   session: false,
 };
 
-export const localStrategy = new Local(opts, async (email, password, done) => {
+export const localStrategy = new Local(opts, async (email: string, password: string, done) => {
   const user = {
-    checkPassword: (password) => {
-      return true;
+    checkPassword: (password: string) => {
+      return !password && email;
     },
   };
   if (!user) {

@@ -1,11 +1,11 @@
-import * as request from 'supertest';
+import request from 'supertest';
+import Koa from 'koa';
 import { app, start } from './app';
 
-let server: any;
+let server: Koa;
 beforeAll(async () => {
   jest.setTimeout(10000);
-  server = await start(app, () => {
-  });
+  server = await start(app, function () { return });
 });
 
 test('it works', async () => {

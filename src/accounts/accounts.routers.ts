@@ -1,5 +1,5 @@
-import * as Router from 'koa-joi-router';
-import * as passport from 'koa-passport';
+import Router from 'koa-joi-router';
+import passport from 'koa-passport';
 import { AccountsController } from './accounts.controllers';
 import { AccountsValidator } from './accounts.validators';
 
