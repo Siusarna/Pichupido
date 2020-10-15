@@ -1,4 +1,4 @@
-import * as koaPassport from 'koa-passport';
+import koaPassport from 'koa-passport';
 import { localStrategy } from './local.strategy';
 import { jwtStrategy } from './jwt.strategy';
 

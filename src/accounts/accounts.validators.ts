@@ -1,5 +1,5 @@
 import * as Router from 'koa-joi-router';
-export const PASSWORD_PATTERN = new RegExp('^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})', 'i');
+export const PASSWORD_PATTERN = new RegExp('^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{6,})', 'i');
 
 const joi = Router.Joi;
 const joiPassword = joi.string().regex(PASSWORD_PATTERN).required()

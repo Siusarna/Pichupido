@@ -1,5 +1,5 @@
 import { Strategy as JWT, ExtractJwt, StrategyOptions } from 'passport-jwt';
-import * as config from 'config';
+import config from 'config';
 
 const opts: StrategyOptions = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme(config.get('tokens.jwtFromRequest')),

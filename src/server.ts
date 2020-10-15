@@ -1,4 +1,4 @@
-import * as config from 'config';
+import config from 'config';
 
 import { app, start } from './app';
 const port = config.get('server.port');
