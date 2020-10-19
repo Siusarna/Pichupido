@@ -64,7 +64,9 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
     multipart: true,
     includeUnparsed: true,
   }));
-  app.use(helmet());
+  app.use(helmet({
+    contentSecurityPolicy: false,
+  }));
 
   app.use(
     koaSwagger({
