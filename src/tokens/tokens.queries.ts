@@ -25,12 +25,6 @@ export async function getToken(userId: string): Promise<Token> {
 
 export async function updateToken({ userId, tokenId, updatedAt }: Token): Promise<void> {
   const [updateClause, values, nextIndx] = getUpdateClauses({ tokenId, updatedAt }, tokenProps);
-  console.dir({ updateClause, values, nextIndx });
-  console.dir({ text: `
-  UPDATE Token
-  SET 
-    ${updateClause}
-  WHERE user_id = $${nextIndx}`, arr: [...values, userId] })
   await query(`
     UPDATE Token
     SET 
