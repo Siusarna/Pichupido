@@ -1,5 +1,5 @@
 import Router from 'koa-joi-router';
-import passport from 'koa-passport';
+import checkAuth from '../middlewares/checkAuth';
 import { AccountsController } from './accounts.controllers';
 import { AccountsValidator } from './accounts.validators';
 
@@ -8,8 +8,20 @@ const accountsRouter = Router();
 accountsRouter.post(
   '/accounts/sign-in',
   AccountsValidator.signIn,
-  passport.authenticate('local', { session: false }),
   AccountsController.signIn,
+);
+
+accountsRouter.post(
+  '/accounts/sign-up',
+  AccountsValidator.signUp,
+  AccountsController.signUp,
+);
+
+accountsRouter.get(
+  '/accounts/profile',
+  AccountsValidator.getProfile,
+  checkAuth,
+  AccountsController.profile
 );
 
 export default accountsRouter;
