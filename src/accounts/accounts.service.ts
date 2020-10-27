@@ -1,7 +1,7 @@
 import { createAndUpdateTokens } from '../tokens';
 import * as queries from './accounts.queries';
 import { checkPassword, genSalt, genHash } from '../utils/passwords';
-import { Credentials, User, UserData, UserId } from './accounts.types';
+import { Credentials, UserData, UserId } from './accounts.types';
 
 
 export class AccountsServices {
