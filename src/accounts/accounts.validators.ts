@@ -15,7 +15,7 @@ export class AccountsValidator {
       },
     },
     validate: {
-      type: 'json',
+      type: 'form',
       body: {
         email: joi.string().email().required(),
         password: joiPassword,
@@ -23,18 +23,10 @@ export class AccountsValidator {
       output: {
         200: {
           body: {
-            tokens: joi.object({
-              accessToken: joi.string(),
-              accessExpiresIn: joi.number(),
-              refreshToken: joi.string(),
-              refreshExpiresIn: joi.number(),
-            }),
             user: {
               id: joi.number(),
               firstName: joi.string(),
               lastName: joi.string(),
-              username: joi.string().allow(null),
-              photo: joi.string(),
               role: joi.string().allow(null),
             },
           },
@@ -42,4 +34,67 @@ export class AccountsValidator {
       },
     },
   };
+
+  static signUp: Router.Config = {
+    meta: {
+      swagger: {
+        summary: 'User sign up',
+        description: 'User registration',
+        tags: ['accounts'],
+      },
+    },
+    validate: {
+      type: 'form',
+      body: {
+        email: joi.string().email().required(),
+        password: joiPassword,
+        confirmPassword: joi.string().valid(joi.ref('password')).required().options({ language: { any: { allowOnly: 'must match password' } } }),
+        firstName: joi.string(),
+        lastName: joi.string(),
+        role: joi.string().valid('admin', 'employee'),
+      },
+      output: {
+        201: {
+          body: {
+            success: true,
+          },
+        },
+        401: {
+          body: {
+            success: false,
+            message: joi.string().required(),
+          },
+        },
+      },
+    },
+  };
+
+  static getProfile: Router.Config = {
+    meta: {
+      swagger: {
+        summary: 'Get user profile',
+        description: 'Get profile data of current user',
+        tags: ['accounts'],
+      },
+    },
+    validate: {
+      output: {
+        200: {
+          body: {
+            id: joi.number(),
+            email: joi.string().email(),
+            firstName: joi.string(),
+            lastName: joi.string(),
+            role: joi.string().allow(null),
+          },
+        },
+        400: {
+          body: {
+            success: false,
+            message: joi.string().required(),
+          },
+        },
+      },
+    },
+  }
 }
