@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Pichupido system - it is web application that will help restaurant create their \r own page with unique design, menu, order system, \r possibility to pay online, call a waiter and feedback system.",
   "main": "index.js",
+  "engines": {
+    "node": "12.16.1",
+    "npm": "6.14.8"
+  },
   "scripts": {
     "test": "jest .",
     "start": "node --max_old_space_size=2560 build/src/server.js",
