@@ -29,7 +29,7 @@ export class AccountsController {
     try {
       ctx.body = await AccountsServices.profile(ctx.state.user);
     } catch (e) {
-      return ctx.throw(e);
+      return ctx.throw(400, e);
     }
   }
 }
