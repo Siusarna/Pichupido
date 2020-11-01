@@ -15,7 +15,7 @@ export class AccountsValidator {
       },
     },
     validate: {
-      type: 'form',
+      type: 'json',
       body: {
         email: joi.string().email().required(),
         password: joiPassword,
@@ -44,7 +44,7 @@ export class AccountsValidator {
       },
     },
     validate: {
-      type: 'form',
+      type: 'json',
       body: {
         email: joi.string().email().required(),
         password: joiPassword,
