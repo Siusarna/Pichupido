@@ -4,8 +4,6 @@ import config from 'config';
 import { v4 as uuidv4 } from 'uuid';
 
 const s3conf: {
-  accessKeyId: string,
-  secretAccessKey: string,
   bucketName: string,
 } = config.get('aws');
 
