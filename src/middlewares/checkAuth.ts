@@ -52,11 +52,10 @@ const checkAuth: Middleware = async (ctx, next) => {
   if (payload.type !== 'access') {
     return ctx.throw(400, 'Invalid token, please log in again');
   }
-  const userId = parseInt(payload.userId);
-  const [user] = await getUserById(userId);
+  const [user] = await getUserById(payload.userId);
   ctx.state.user = user;
   if (user.role === 'admin') {
-    const restaurant = await getRestaurantByUserId(userId);
+    const restaurant = await getRestaurantByUserId(payload.userId);
     ctx.state.restaurant = restaurant;
   }
   return next();
