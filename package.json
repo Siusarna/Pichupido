@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest .",
-    "start": "node build/src/server.js",
+    "start": "node --max_old_space_size=2560 build/src/server.js",
     "serve": "tsnd --respawn --no-notify --transpile-only src/server.ts",
     "lint": "eslint . --ext .ts",
     "lint-fix": "eslint . --ext .ts --fix",
