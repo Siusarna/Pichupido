@@ -17,6 +17,7 @@ export const createRestaurant: Router.Config = {
       cover: joi.string(),
       workingHours: joi.string(),
       location: joi.string(),
+      description: joi.string(),
     },
     output: {
       201: {
@@ -54,6 +55,7 @@ export const getRestaurant: Router.Config = {
           cover: joi.string(),
           workingHours: joi.string(),
           location: joi.string(),
+          description: joi.string(),
         },
       },
       400: {
@@ -86,6 +88,7 @@ export const getAllRestaurants: Router.Config = {
           cover: joi.string(),
           workingHours: joi.string(),
           location: joi.string(),
+          description: joi.string(),
         }),
       },
       400: {
@@ -112,6 +115,7 @@ export const updateRestaurant: Router.Config = {
       cover: joi.string(),
       workingHours: joi.string(),
       location: joi.string(),
+      description: joi.string(),
     },
     params: {
       id: joi.number(),
