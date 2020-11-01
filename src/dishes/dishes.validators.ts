@@ -10,7 +10,7 @@ export const createDish: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
       photo: joi.string(),
@@ -243,7 +243,7 @@ export const updateDish: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
       photo: joi.string(),

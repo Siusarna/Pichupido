@@ -10,7 +10,7 @@ export const createMenu: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
     },
@@ -95,7 +95,7 @@ export const updateMenu: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
     },

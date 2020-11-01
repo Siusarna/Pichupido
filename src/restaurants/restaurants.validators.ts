@@ -10,7 +10,7 @@ export const createRestaurant: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
       logo: joi.string(),
@@ -108,7 +108,7 @@ export const updateRestaurant: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
       logo: joi.string(),

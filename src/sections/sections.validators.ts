@@ -10,7 +10,7 @@ export const createSection: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
     },
@@ -93,7 +93,7 @@ export const updateSection: Router.Config = {
     },
   },
   validate: {
-    type: 'form',
+    type: 'json',
     body: {
       name: joi.string(),
     },
