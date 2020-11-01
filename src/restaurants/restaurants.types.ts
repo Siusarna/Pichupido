@@ -6,6 +6,7 @@ export interface Restaurant {
   location: string,
   cover: string,
   logo: string,
+  description: string,
 }
 
 export interface RestaurantData {
@@ -14,6 +15,7 @@ export interface RestaurantData {
   location: string,
   cover: string,
   logo: string,
+  description: string,
 }
 
 export interface RestaurantDataOptional {
@@ -22,4 +24,5 @@ export interface RestaurantDataOptional {
   location?: string,
   cover?: string,
   logo?: string,
+  description?: string,
 }

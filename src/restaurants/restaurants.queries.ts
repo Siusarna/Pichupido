@@ -10,6 +10,7 @@ const restaurantProps = {
   logo: { dbAlias: 'logo_url' },
   cover: { dbAlias: 'cover_url' },
   adminId: { dbAlias: 'admin_id' },
+  description: {},
 };
 
 export const getRestaurantByUserId = async(userId: number): Promise<Restaurant> => {

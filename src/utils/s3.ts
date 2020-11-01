@@ -25,7 +25,7 @@ export const deleteImage = async (url: string): Promise<void> => {
 export const uploadImage = async (photo: string): Promise<string> => {
   try {
     const base64Data = Buffer.from(photo.replace(/^ ?data:image\/\w+;base64,/, ''), 'base64');
-    const type = photo.split(';')[0].split('/')[1];
+    const type = photo.split(';')[0].split('/')[1] || 'png';
     const name = uuidv4();
     const uploadParams = {
       Bucket: s3conf.bucketName,

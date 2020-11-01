@@ -14,6 +14,7 @@ import restaurantsRouter from './restaurants/restaurants.routers';
 import menuRouter from './menu/menu.routers';
 import sectionRouter from './sections/sections.routers';
 import dishesRouter from './dishes/dishes.routers';
+import tablesRouter from './tables/tables.routers';
 
 
 
@@ -43,6 +44,7 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
   generator.addJoiRouter(menuRouter);
   generator.addJoiRouter(sectionRouter);
   generator.addJoiRouter(dishesRouter);
+  generator.addJoiRouter(tablesRouter);
 
   const spec = generator.generateSpec({
     info: {
@@ -113,6 +115,7 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
   router.use(menuRouter.middleware());
   router.use(sectionRouter.middleware());
   router.use(dishesRouter.middleware());
+  router.use(tablesRouter.middleware());
 
   app.use(router.middleware());
 
