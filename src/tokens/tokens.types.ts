@@ -7,12 +7,12 @@ export interface JwtConfig {
 }
 
 export interface AccessToken {
-  userId: string,
+  userId: number,
   type: string
 }
 
 export interface RefreshToken {
-  userId: string,
+  userId: number,
   tokenId: string,
   type: string
 }
@@ -24,6 +24,6 @@ export interface Tokens {
 
 export interface Token {
   tokenId: string,
-  userId: string,
+  userId: number,
   updatedAt?: Date,
 }
