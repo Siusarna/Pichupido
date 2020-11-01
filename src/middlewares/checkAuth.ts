@@ -5,6 +5,7 @@ import Koa, { Middleware } from 'koa';
 import { AccessToken, JwtConfig, RefreshToken } from '../tokens/tokens.types';
 import { getUserById } from '../accounts/accounts.queries';
 import { createAndUpdateTokens } from '../tokens';
+import { getRestaurantByUserId } from '../restaurants/restaurants.queries';
 
 const jwtConfig: JwtConfig = config.get('tokens');
 
@@ -53,6 +54,10 @@ const checkAuth: Middleware = async (ctx, next) => {
   }
   const [user] = await getUserById(payload.userId);
   ctx.state.user = user;
+  if (user.role === 'admin') {
+    const restaurant = await getRestaurantByUserId(payload.userId);
+    ctx.state.restaurant = restaurant;
+  }
   return next();
 };
 

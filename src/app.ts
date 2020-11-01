@@ -10,6 +10,12 @@ import { koaSwagger } from 'koa2-swagger-ui';
 import { createServer, Server } from 'http';
 
 import accountsRouter from './accounts/accounts.routers';
+import restaurantsRouter from './restaurants/restaurants.routers';
+import menuRouter from './menu/menu.routers';
+import sectionRouter from './sections/sections.routers';
+import dishesRouter from './dishes/dishes.routers';
+
+
 
 // const databaseConf: any = config.get('database');
 
@@ -33,6 +39,10 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
   const generator = new SwaggerAPI();
 
   generator.addJoiRouter(accountsRouter);
+  generator.addJoiRouter(restaurantsRouter);
+  generator.addJoiRouter(menuRouter);
+  generator.addJoiRouter(sectionRouter);
+  generator.addJoiRouter(dishesRouter);
 
   const spec = generator.generateSpec({
     info: {
@@ -45,6 +55,22 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
       {
         name: 'accounts',
         description: 'Group of API methods for managing user accounts',
+      },
+      {
+        name: 'restaurants',
+        description: 'Group of API methods for managing restaurants',
+      },
+      {
+        name: 'menu',
+        description: 'Group of API methods for managing menu',
+      },
+      {
+        name: 'sections',
+        description: 'Group of API methods for managing sections',
+      },
+      {
+        name: 'dishes',
+        description: 'Group of API methods for managing dishes',
       },
     ],
   }, {
@@ -63,6 +89,7 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
   app.use(bodyParser({
     multipart: true,
     includeUnparsed: true,
+    formLimit: 200 * 1024,
   }));
   app.use(helmet({
     contentSecurityPolicy: false,
@@ -82,6 +109,10 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
     ctx.body = 'It works!';
   });
   router.use(accountsRouter.middleware());
+  router.use(restaurantsRouter.middleware());
+  router.use(menuRouter.middleware());
+  router.use(sectionRouter.middleware());
+  router.use(dishesRouter.middleware());
 
   app.use(router.middleware());
 

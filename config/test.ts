@@ -24,4 +24,7 @@ module.exports = {
     password: process.env.PGPASSWORD,
     port: process.env.PGPORT || 5432,
   },
+  aws: {
+    bucketName: 'pichupido',
+  }
 };

@@ -10,7 +10,7 @@ const REFRESH_TOKEN = 'refresh';
 
 const jwtConf: JwtConfig = config.get('tokens');
 
-const generateAccessToken = (userId: string) => {
+const generateAccessToken = (userId: number) => {
   const payload = {
     userId,
     type: ACCESS_TOKEN,
@@ -19,7 +19,7 @@ const generateAccessToken = (userId: string) => {
   return jwt.sign(payload, jwtConf.accessSecret, options);
 };
 
-const generateRefreshToken = (userId: string) => {
+const generateRefreshToken = (userId: number) => {
   const tokenId = uuidv4().toString();
   const payload = {
     type: REFRESH_TOKEN,
@@ -33,7 +33,7 @@ const generateRefreshToken = (userId: string) => {
   };
 };
 
-export const createAndUpdateTokens = async (userId: string): Promise<Tokens> => {
+export const createAndUpdateTokens = async (userId: number): Promise<Tokens> => {
   try {
     const accessToken = generateAccessToken(userId);
     const { tokenId, refreshToken } = generateRefreshToken(userId);

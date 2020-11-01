@@ -11,7 +11,7 @@ const userProps = {
   salt: {},
 };
 
-export async function getUserById(id: string): Promise<User[]> {
+export async function getUserById(id: number): Promise<User[]> {
   const selectClause = getSelectClause({ ...userProps, id: {} });
   return (await query(`SELECT ${selectClause} FROM "User" WHERE id = $1`, [id])).rows;
 }

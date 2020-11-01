@@ -13,7 +13,7 @@ const tokenIdProp = {
 
 const fullTokenProps = { ...tokenProps, ...tokenIdProp };
 
-export async function getToken(userId: string): Promise<Token> {
+export async function getToken(userId: number): Promise<Token> {
   const selectClause = getSelectClause(fullTokenProps)
   return (await query(`
     SELECT 
