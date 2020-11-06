@@ -6,5 +6,6 @@ export const getQrCode = async (data: string): Promise<string> => {
     url: `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${data}`,
     responseType: 'arraybuffer',
   });
-  return response.data.toString('base64');
+  const buffer = Buffer.from(response.data);
+  return buffer.toString('base64');
 };
