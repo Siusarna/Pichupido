@@ -6,7 +6,7 @@ import { goodImg } from '../../testing.utils/images';
 
 let server: Koa;
 beforeAll(async () => {
-  jest.setTimeout(10000);
+  jest.setTimeout(20000);
   server = await start(app, function () { return });
 });
 
