@@ -96,7 +96,7 @@ export const updateDish = async (
 ): Promise<void> => {
   const currDish = await queries.getDishById(dishId);
   if (!currDish) {
-    throw ('There are no dishe with this id');
+    throw ('There are no dishes with this id');
   }
 
   if (dish.sectionId) {
@@ -126,10 +126,14 @@ export const updateDish = async (
 
 export const deleteDish = async (restaurantId: number, dishId: number): Promise<void> => {
   const dish = await queries.getDishById(dishId);
+  if (!dish) {
+    throw ('There are no dishes with this id');
+  }
   const section = await getSectionById(dish.sectionId);
   if (restaurantId !== section.restaurantId) {
     throw ('This dish doesn\'t belong to your restaurant');
   }
 
+  await deleteImage(dish.photo);
   await queries.deleteDish(dishId);
 }
