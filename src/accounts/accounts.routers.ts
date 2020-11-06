@@ -24,4 +24,12 @@ accountsRouter.get(
   AccountsController.profile
 );
 
+accountsRouter.delete(
+  '/accounts/profile',
+  AccountsValidator.deleteProfile,
+  checkAuth,
+  AccountsController.deleteProfile
+);
+
+
 export default accountsRouter;

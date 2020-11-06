@@ -97,4 +97,28 @@ export class AccountsValidator {
       },
     },
   }
+
+  static deleteProfile: Router.Config = {
+    meta: {
+      swagger: {
+        summary: 'Delete user profile',
+        description: 'Delete profile data of current user',
+        tags: ['accounts'],
+      },
+    },
+    validate: {
+      output: {
+        204: {
+          body: {}
+        },
+        400: {
+          body: {
+            success: false,
+            message: joi.string().required(),
+          },
+        },
+      },
+    },
+  }
 }
+
