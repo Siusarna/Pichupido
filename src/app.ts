@@ -20,7 +20,6 @@ import tablesRouter from './tables/tables.routers';
 
 // const databaseConf: any = config.get('database');
 
-import koaPassport from './libs/passport/koaPassport';
 import errorCatcherMiddleware from './middlewares/errorCatcher';
 
 /*
@@ -83,7 +82,6 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
     ctx.body = JSON.stringify(spec, null, '  ');
   });
   app.use(httpLogger());
-  app.use(koaPassport.initialize());
   app.use(errorCatcherMiddleware);
   app.use(cors({
     credentials: true,
