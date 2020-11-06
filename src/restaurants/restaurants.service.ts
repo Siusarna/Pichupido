@@ -39,10 +39,12 @@ export const updateRestaurant = async (restaurant: RestaurantDataOptional,
   }
 
   if (restaurant.logo) {
+    if (!checkImage(restaurant.logo)) throw ('Invalid image');
     restaurant.logo = await uploadImage(restaurant.logo);
     await deleteImage(currRestaurant.logo);
   }
   if (restaurant.cover) {
+    if (!checkImage(restaurant.cover)) throw ('Invalid image');
     restaurant.cover = await uploadImage(restaurant.cover);
     await deleteImage(currRestaurant.cover);
   }

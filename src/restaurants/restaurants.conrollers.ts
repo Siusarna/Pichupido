@@ -38,7 +38,7 @@ export const updateRestaurant: Middleware = async (ctx) => {
 
 export const deleteRestaurant: Middleware = async (ctx) => {
   try {
-    RestaurantsServices.deleteRestaurant(ctx.state.user.id, ctx.params.id);
+    await RestaurantsServices.deleteRestaurant(ctx.state.user.id, ctx.params.id);
     ctx.status = 204;
   } catch (e) {
     ctx.throw(400, e);

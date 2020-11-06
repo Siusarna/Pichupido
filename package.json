@@ -8,7 +8,7 @@
     "npm": "6.14.8"
   },
   "scripts": {
-    "test": "jest .",
+    "test": "jest -w 1 --forceExit . ",
     "start": "node --max_old_space_size=2560 build/src/server.js",
     "serve": "tsnd --respawn --no-notify --transpile-only src/server.ts",
     "lint": "eslint . --ext .ts",
@@ -51,6 +51,8 @@
     "uuid": "^8.3.1"
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^4.1.1",
+    "@stryker-mutator/jest-runner": "^4.1.1",
     "@types/config": "0.0.36",
     "@types/koa": "^2.11.4",
     "@types/koa-helmet": "^5.2.0",
@@ -103,7 +105,7 @@
       "text",
       "text-summary"
     ],
-    "testRegex": "\\.unit.ts",
+    "testRegex": "\\.((unit)|(integration)).ts",
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/build/",

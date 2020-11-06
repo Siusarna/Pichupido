@@ -1,5 +1,5 @@
 export interface Restaurant {
-  id: string,
+  id: number,
   adminId: number,
   name: string,
   workingHours: string,
