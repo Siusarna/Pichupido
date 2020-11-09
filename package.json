@@ -48,6 +48,7 @@
     "passport-local": "^1.0.0",
     "pg": "^8.4.1",
     "pino": "^6.7.0",
+    "stripe": "^8.120.0",
     "uuid": "^8.3.1"
   },
   "devDependencies": {

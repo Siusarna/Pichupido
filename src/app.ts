@@ -15,6 +15,7 @@ import menuRouter from './menu/menu.routers';
 import sectionRouter from './sections/sections.routers';
 import dishesRouter from './dishes/dishes.routers';
 import tablesRouter from './tables/tables.routers';
+import ordersRouter from './orders/orders.routers';
 
 
 
@@ -22,7 +23,6 @@ import tablesRouter from './tables/tables.routers';
 
 import koaPassport from './libs/passport/koaPassport';
 import errorCatcherMiddleware from './middlewares/errorCatcher';
-
 /*
  * Using copy of database configuration from config
  * because pg driver will trying to change the read-only 'type' property
@@ -45,6 +45,7 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
   generator.addJoiRouter(sectionRouter);
   generator.addJoiRouter(dishesRouter);
   generator.addJoiRouter(tablesRouter);
+  generator.addJoiRouter(ordersRouter);
 
   const spec = generator.generateSpec({
     info: {
@@ -73,6 +74,10 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
       {
         name: 'dishes',
         description: 'Group of API methods for managing dishes',
+      },
+      {
+        name: 'orders',
+        description: 'Group of API methods for managing orders',
       },
     ],
   }, {
@@ -116,6 +121,7 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
   router.use(sectionRouter.middleware());
   router.use(dishesRouter.middleware());
   router.use(tablesRouter.middleware());
+  router.use(ordersRouter.middleware());
 
   app.use(router.middleware());
 
