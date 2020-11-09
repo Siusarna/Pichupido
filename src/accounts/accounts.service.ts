@@ -5,12 +5,12 @@ import { Credentials, UserData, UserId } from './accounts.types';
 
 
 export class AccountsServices {
-  static async signIn({ password, email }: Credentials): Promise<{user: UserData & UserId, accessToken: string, refreshToken: string }> {
+  static async signIn({ password, email }: Credentials): Promise<{ user: UserData & UserId, accessToken: string, refreshToken: string }> {
     const [user] = await queries.getUserByEmail(email);
     if (!user || !checkPassword(password, user.password, user.salt)) {
       throw new Error('Email or password is incorrect');
     }
-  
+
     const { accessToken, refreshToken } = await createAndUpdateTokens(user.id);
     const { id, firstName, lastName, role } = user;
     return {
@@ -41,9 +41,12 @@ export class AccountsServices {
     });
   }
 
-
   static async profile({ id }: UserId): Promise<UserData> {
     const [{ password, salt, ...rest }] = await queries.getUserById(id);
     return rest;
+  }
+
+  static async deleteProfile({ id }: UserId): Promise<void> {
+    await queries.deleteUserById(id);
   }
 }

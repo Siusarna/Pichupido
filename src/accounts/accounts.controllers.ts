@@ -32,4 +32,13 @@ export class AccountsController {
       return ctx.throw(400, e);
     }
   }
+
+  static async deleteProfile(ctx: Context): Promise<void> {
+    try {
+      await AccountsServices.deleteProfile(ctx.state.user);
+      ctx.status = 204;
+    } catch (e) {
+      return ctx.throw(400, e);
+    }
+  }
 }

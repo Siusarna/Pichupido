@@ -25,3 +25,10 @@ export async function insertNewUser(user: HashedCredentials & UserData): Promise
   const [props, values, valueIdxs] = getInsertClauses(user, userProps);
   return (await query(`INSERT INTO "User"(${props}) VALUES (${valueIdxs})`, values)).rows[0];
 }
+
+export async function deleteUserById(id: number): Promise<void> {
+  await query(`
+  DELETE FROM "User"
+  WHERE id = $1
+  `, [id]);
+}
