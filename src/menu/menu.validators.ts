@@ -10,19 +10,22 @@ export const createMenu: Router.Config = {
     },
   },
   validate: {
+    params: {
+      restaurantId: joi.number().required(),
+    },
     type: 'json',
     body: {
-      name: joi.string(),
+      name: joi.string().required(),
     },
     output: {
       201: {
         body: {
-          id: joi.number(),
+          id: joi.number().required(),
         },
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -38,20 +41,21 @@ export const getMenu: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       200: {
         body: {
-          id: joi.number(),
-          restaurantId: joi.number(),
-          name: joi.string(),
-          isActive: joi.boolean(),
+          id: joi.number().required(),
+          restaurantId: joi.number().required(),
+          name: joi.string().required(),
+          isActive: joi.boolean().required(),
         },
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -67,20 +71,20 @@ export const getMenusByRestaurant: Router.Config = {
   },
   validate: {
     params: {
-      restaurantId: joi.number(),
+      restaurantId: joi.number().required(),
     },
     output: {
       200: {
         body: joi.array().items({
-          id: joi.number(),
-          restaurantId: joi.number(),
-          name: joi.string(),
-          isActive: joi.boolean(),
+          id: joi.number().required(),
+          restaurantId: joi.number().required(),
+          name: joi.string().required(),
+          isActive: joi.boolean().required(),
         }),
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -100,7 +104,8 @@ export const updateMenu: Router.Config = {
       name: joi.string(),
     },
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       204: {
@@ -108,7 +113,7 @@ export const updateMenu: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -124,7 +129,8 @@ export const deleteMenu: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       204: {
@@ -132,7 +138,7 @@ export const deleteMenu: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -148,7 +154,8 @@ export const activateMenu: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       204: {
@@ -156,7 +163,7 @@ export const activateMenu: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -172,7 +179,8 @@ export const deactivateMenu: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       204: {
@@ -180,7 +188,7 @@ export const deactivateMenu: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },

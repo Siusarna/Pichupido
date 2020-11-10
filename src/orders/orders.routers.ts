@@ -5,12 +5,12 @@ import * as OrdersController from './orders.conrollers';
 const ordersRouter = Router();
 
 ordersRouter.post(
-  '/orders',
+  '/restaurants/:restaurantId/orders',
   OrdersValidator.createOrder,
   OrdersController.createOrder,
 );
 ordersRouter.post(
-  '/orders/:orderId/confirm',
+  '/restaurants/:restaurantId/orders/:orderId/confirm',
   OrdersValidator.confirmOrder,
   OrdersController.confirmOrder,
 );

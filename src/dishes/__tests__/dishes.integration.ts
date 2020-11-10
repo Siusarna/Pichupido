@@ -17,14 +17,14 @@ describe('dishes tests', () => {
     const restaurantId = await tempResCreator.createRestaurant(cookies);
 
     const sectionResponse = await request(server.callback())
-      .post('/sections')
+      .post(`/restaurants/${restaurantId}/sections`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'Second dish' });
     const sectionId = sectionResponse.body.id;
 
     const menuResponse = await request(server.callback())
-      .post('/menu')
+      .post(`/restaurants/${restaurantId}/menus`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'Main' });
@@ -40,11 +40,10 @@ describe('dishes tests', () => {
     };
 
     const responsePost = await request(server.callback())
-      .post('/dishes')
+      .post(`/restaurants/${restaurantId}/dishes`)
       .type('json')
       .set('Cookie', cookies)
       .send(dish);
-    console.dir({ responsePost });
     expect(responsePost.status).toBe(201);
     expect(responsePost.body).toMatchObject({
       id: expect.any(Number)
@@ -52,7 +51,7 @@ describe('dishes tests', () => {
     const { id } = responsePost.body;
 
     const responseGet = await request(server.callback())
-      .get(`/dishes/${id}`);
+      .get(`/restaurants/${restaurantId}/dishes/${id}`);
     expect(responseGet.status).toBe(200);
     expect(responseGet.body).toMatchObject({
       ...dish,
@@ -61,21 +60,21 @@ describe('dishes tests', () => {
     });
 
     const responseUpdate = await request(server.callback())
-      .put(`/dishes/${id}`)
+      .put(`/restaurants/${restaurantId}/dishes/${id}`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'Better Potato' });
     expect(responseUpdate.status).toBe(204);
 
     const responseGet2 = await request(server.callback())
-      .get(`/dishes/${id}`);
+      .get(`/restaurants/${restaurantId}/dishes/${id}`);
     expect(responseGet2.status).toBe(200);
     expect(responseGet2.body).toMatchObject({
       name: 'Better Potato'
     });
 
     const responseDelete = await request(server.callback())
-      .delete(`/dishes/${id}`)
+      .delete(`/restaurants/${restaurantId}/dishes/${id}`)
       .set('Cookie', cookies);
     expect(responseDelete.status).toBe(204);
 

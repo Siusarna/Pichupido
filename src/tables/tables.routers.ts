@@ -13,13 +13,13 @@ tablesRouter.get(
 );
 
 tablesRouter.get(
-  '/tables/:id',
+  '/restaurants/:restaurantId/tables/:id',
   TablesValidator.getTable,
   TablesControllers.getTable,
 );
 
 tablesRouter.post(
-  '/tables/',
+  '/restaurants/:restaurantId/tables',
   TablesValidator.createTable,
   checkAuth,
   checkAccess('admin'),
@@ -27,7 +27,7 @@ tablesRouter.post(
 );
 
 tablesRouter.delete(
-  '/tables/:id',
+  '/restaurants/:restaurantId/tables/:id',
   TablesValidator.deleteTable,
   checkAuth,
   checkAccess('admin'),

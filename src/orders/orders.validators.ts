@@ -25,6 +25,9 @@ export const createOrder: Router.Config = {
     },
   },
   validate: {
+    params: {
+      restaurantId: joi.number(),
+    },
     type: 'json',
     body: {
       kitchenNotes: joi.string().empty(''),
@@ -60,6 +63,7 @@ export const confirmOrder: Router.Config = {
   validate: {
     params: {
       orderId: joi.string().required(),
+      restaurantId: joi.number(),
     },
     output: {
       204: {

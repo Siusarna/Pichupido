@@ -10,24 +10,27 @@ export const createDish: Router.Config = {
     },
   },
   validate: {
+    params: {
+      restaurantId: joi.number().required(),
+    },
     type: 'json',
     body: {
-      name: joi.string(),
-      photo: joi.string(),
-      description: joi.string(),
-      price: joi.string(),
-      sectionId: joi.number(),
-      menuId: joi.number(),
+      name: joi.string().required(),
+      photo: joi.string().required(),
+      description: joi.string().required(),
+      price: joi.string().required(),
+      sectionId: joi.number().required(),
+      menuId: joi.number().required(),
     },
     output: {
       201: {
         body: {
-          id: joi.number(),
+          id: joi.number().required(),
         },
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -43,109 +46,28 @@ export const getDishById: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       200: {
         body: {
-          id: joi.number(),
+          id: joi.number().required(),
           restaurantId: joi.number(),
-          name: joi.string(),
-          photo: joi.string(),
-          description: joi.string(),
-          price: joi.string(),
-          discount: joi.number(),
-          sectionId: joi.number(),
-          menuId: joi.number(),
-          sectionName: joi.string(),
-          menuName: joi.string(),
+          name: joi.string().required(),
+          photo: joi.string().required(),
+          description: joi.string().required(),
+          price: joi.string().required(),
+          discount: joi.number().required(),
+          sectionId: joi.number().required(),
+          menuId: joi.number().required(),
+          sectionName: joi.string().required(),
+          menuName: joi.string().required(),
         },
       },
       400: {
         body: {
-          error: joi.string(),
-        },
-      },
-    },
-  },
-};
-
-export const getDishesBySection: Router.Config = {
-  meta: {
-    swagger: {
-      summary: 'Get dishes by section',
-      tags: ['dishes'],
-    },
-  },
-  validate: {
-    params: {
-      sectionId: joi.number(),
-    },
-    output: {
-      200: {
-        body: {
-          sections: joi.array().items({
-            id: joi.number(),
-            name: joi.string(),
-            menus: joi.array().items({
-              id: joi.number(),
-              name: joi.string(),
-              dishes: joi.array().items({
-                id: joi.number(),
-                name: joi.string(),
-                description: joi.string(),
-                photo: joi.string(),
-                price: joi.string(),
-                discount: joi.number(),
-              })
-            })
-          })
-        },
-      },
-      400: {
-        body: {
-          error: joi.string(),
-        },
-      },
-    },
-  },
-};
-
-export const getActiveDishesBySection: Router.Config = {
-  meta: {
-    swagger: {
-      summary: 'Get dishes by section, that are contained in active menus',
-      tags: ['dishes'],
-    },
-  },
-  validate: {
-    params: {
-      sectionId: joi.number(),
-    },
-    output: {
-      200: {
-        body: {
-          sections: joi.array().items({
-            id: joi.number(),
-            name: joi.string(),
-            menus: joi.array().items({
-              id: joi.number(),
-              name: joi.string(),
-              dishes: joi.array().items({
-                id: joi.number(),
-                name: joi.string(),
-                description: joi.string(),
-                photo: joi.string(),
-                price: joi.string(),
-                discount: joi.number(),
-              })
-            })
-          })
-        },
-      },
-      400: {
-        body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -161,7 +83,9 @@ export const getDishesByRestaurant: Router.Config = {
   },
   validate: {
     params: {
-      restaurantId: joi.number(),
+      restaurantId: joi.number().required(),
+      sectionId: joi.number(),
+      active: joi.boolean(),
     },
     output: {
       200: {
@@ -186,54 +110,12 @@ export const getDishesByRestaurant: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
   },
 };
-
-export const getActiveDishesByRestaurant: Router.Config = {
-  meta: {
-    swagger: {
-      summary: 'Get dishes by restaurant, that are contained in active menus',
-      tags: ['dishes'],
-    },
-  },
-  validate: {
-    params: {
-      restaurantId: joi.number(),
-    },
-    output: {
-      200: {
-        body: {
-          sections: joi.array().items({
-            id: joi.number(),
-            name: joi.string(),
-            menus: joi.array().items({
-              id: joi.number(),
-              name: joi.string(),
-              dishes: joi.array().items({
-                id: joi.number(),
-                name: joi.string(),
-                description: joi.string(),
-                photo: joi.string(),
-                price: joi.string(),
-                discount: joi.number(),
-              })
-            })
-          })
-        },
-      },
-      400: {
-        body: {
-          error: joi.string(),
-        },
-      },
-    },
-  },
-};
-
 
 export const updateDish: Router.Config = {
   meta: {
@@ -254,7 +136,8 @@ export const updateDish: Router.Config = {
       menuId: joi.number(),
     },
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       204: {
@@ -262,7 +145,7 @@ export const updateDish: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -278,7 +161,8 @@ export const deleteDish: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       204: {
@@ -286,7 +170,7 @@ export const deleteDish: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },

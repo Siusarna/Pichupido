@@ -13,13 +13,13 @@ sectionsRouter.get(
 );
 
 sectionsRouter.get(
-  '/sections/:id',
+  '/restaurants/:restaurantId/sections/:id',
   SectionsValidator.getSection,
   SectionsControllers.getSection,
 );
 
 sectionsRouter.post(
-  '/sections/',
+  '/restaurants/:restaurantId/sections/',
   SectionsValidator.createSection,
   checkAuth,
   checkAccess('admin'),
@@ -27,7 +27,7 @@ sectionsRouter.post(
 );
 
 sectionsRouter.put(
-  '/sections/:id',
+  '/restaurants/:restaurantId/sections/:id',
   SectionsValidator.updateSection,
   checkAuth,
   checkAccess('admin'),
@@ -35,7 +35,7 @@ sectionsRouter.put(
 );
 
 sectionsRouter.delete(
-  '/sections/:id',
+  '/restaurants/:restaurantId/sections/:id',
   SectionsValidator.deleteSection,
   checkAuth,
   checkAccess('admin'),

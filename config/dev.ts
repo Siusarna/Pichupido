@@ -26,5 +26,8 @@ module.exports = {
   },
   aws: {
     bucketName: 'pichupido',
+  }, 
+  stripe: {
+    secretKey: process.env.STRIPE_SECRET,
   }
 };

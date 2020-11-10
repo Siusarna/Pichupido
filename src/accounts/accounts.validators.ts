@@ -31,6 +31,12 @@ export class AccountsValidator {
             },
           },
         },
+        400: {
+          body: {
+            error: joi.string().required(),
+          },
+        },
+
       },
     },
   };
@@ -49,20 +55,17 @@ export class AccountsValidator {
         email: joi.string().email().required(),
         password: joiPassword,
         confirmPassword: joi.string().valid(joi.ref('password')).required().options({ language: { any: { allowOnly: 'must match password' } } }),
-        firstName: joi.string(),
-        lastName: joi.string(),
-        role: joi.string().valid('admin', 'employee'),
+        firstName: joi.string().required(),
+        lastName: joi.string().required(),
+        role: joi.string().valid('admin', 'employee').required(),
       },
       output: {
         201: {
-          body: {
-            success: true,
-          },
+          body: {},
         },
-        401: {
+        400: {
           body: {
-            success: false,
-            message: joi.string().required(),
+            error: joi.string().required(),
           },
         },
       },
@@ -81,22 +84,47 @@ export class AccountsValidator {
       output: {
         200: {
           body: {
-            id: joi.number(),
-            email: joi.string().email(),
-            firstName: joi.string(),
-            lastName: joi.string(),
-            role: joi.string().allow(null),
+            id: joi.number().required(),
+            email: joi.string().email().required(),
+            firstName: joi.string().required(),
+            lastName: joi.string().required(),
+            role: joi.string().allow(null).required(),
           },
         },
         400: {
           body: {
-            success: false,
-            message: joi.string().required(),
+            error: joi.string().required(),
           },
         },
       },
     },
   }
+
+  static updateProfile: Router.Config = {
+    meta: {
+      swagger: {
+        summary: 'Update user profile',
+        tags: ['accounts'],
+      },
+    },
+    validate: {
+      type: 'json',
+      body: {
+        firstName: joi.string(),
+        lastName: joi.string(),
+      },
+      output: {
+        201: {
+          body: {},
+        },
+        400: {
+          body: {
+            error: joi.string().required(),
+          },
+        },
+      },
+    },
+  };
 
   static deleteProfile: Router.Config = {
     meta: {
@@ -113,12 +141,33 @@ export class AccountsValidator {
         },
         400: {
           body: {
-            success: false,
-            message: joi.string().required(),
+            error: joi.string().required(),
           },
         },
       },
     },
   }
+
+  static logout: Router.Config = {
+    meta: {
+      swagger: {
+        summary: 'Log out',
+        tags: ['accounts'],
+      },
+    },
+    validate: {
+      output: {
+        201: {
+          body: {},
+        },
+        400: {
+          body: {
+            error: joi.string().required(),
+          },
+        },
+      },
+    },
+  };
+
 }
 

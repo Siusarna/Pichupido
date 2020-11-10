@@ -20,7 +20,7 @@ describe('sections tests', () => {
     };
 
     const responsePost = await request(server.callback())
-      .post('/sections')
+      .post(`/restaurants/${restaurantId}/sections`)
       .type('json')
       .set('Cookie', cookies)
       .send(section);
@@ -31,7 +31,7 @@ describe('sections tests', () => {
     const { id } = responsePost.body;
 
     const responseGet = await request(server.callback())
-      .get(`/sections/${id}`);
+      .get(`/restaurants/${restaurantId}/sections/${id}`);
     expect(responseGet.status).toBe(200);
     expect(responseGet.body).toEqual({
       id,
@@ -40,21 +40,21 @@ describe('sections tests', () => {
     });
 
     const responseUpdate = await request(server.callback())
-      .put(`/sections/${id}`)
+      .put(`/restaurants/${restaurantId}/sections/${id}`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'NewName' });
     expect(responseUpdate.status).toBe(204);
 
     const responseGet2 = await request(server.callback())
-      .get(`/sections/${id}`);
+      .get(`/restaurants/${restaurantId}/sections/${id}`);
     expect(responseGet2.status).toBe(200);
     expect(responseGet2.body).toMatchObject({
       name: 'NewName'
     });
 
     const responseDelete = await request(server.callback())
-      .delete(`/sections/${id}`)
+      .delete(`/restaurants/${restaurantId}/sections/${id}`)
       .set('Cookie', cookies);
     expect(responseDelete.status).toBe(204);
 

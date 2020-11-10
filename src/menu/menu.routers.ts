@@ -7,19 +7,19 @@ import * as MenuConroller from './menu.conrollers';
 const menuRouter = Router();
 
 menuRouter.get(
-  '/restaurants/:restaurantId/menu',
+  '/restaurants/:restaurantId/menus',
   MenuValidator.getMenusByRestaurant,
   MenuConroller.getMenusByRestaurant,
 );
 
 menuRouter.get(
-  '/menu/:id',
+  '/restaurants/:restaurantId/menus/:id',
   MenuValidator.getMenu,
   MenuConroller.getMenu,
 );
 
 menuRouter.post(
-  '/menu/',
+  '/restaurants/:restaurantId/menus/',
   MenuValidator.createMenu,
   checkAuth,
   checkAccess('admin'),
@@ -27,7 +27,7 @@ menuRouter.post(
 );
 
 menuRouter.put(
-  '/menu/:id',
+  '/restaurants/:restaurantId/menus/:id',
   MenuValidator.updateMenu,
   checkAuth,
   checkAccess('admin'),
@@ -35,7 +35,7 @@ menuRouter.put(
 );
 
 menuRouter.delete(
-  '/menu/:id',
+  '/restaurants/:restaurantId/menus/:id',
   MenuValidator.deleteMenu,
   checkAuth,
   checkAccess('admin'),
@@ -43,7 +43,7 @@ menuRouter.delete(
 );
 
 menuRouter.put(
-  '/menu/:id/activate',
+  '/restaurants/:restaurantId/menus/:id/activate',
   MenuValidator.activateMenu,
   checkAuth,
   checkAccess('admin'),
@@ -52,7 +52,7 @@ menuRouter.put(
 
 
 menuRouter.put(
-  '/menu/:id/deactivate',
+  '/restaurants/:restaurantId/menus/:id/deactivate',
   MenuValidator.deactivateMenu,
   checkAuth,
   checkAccess('admin'),
