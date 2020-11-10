@@ -24,11 +24,23 @@ accountsRouter.get(
   AccountsController.profile
 );
 
+accountsRouter.put(
+  '/accounts/profile',
+  AccountsValidator.updateProfile,
+  checkAuth,
+);
+
 accountsRouter.delete(
   '/accounts/profile',
   AccountsValidator.deleteProfile,
   checkAuth,
   AccountsController.deleteProfile
+);
+
+accountsRouter.post(
+  '/accounts/logout',
+  AccountsValidator.logout,
+  checkAuth,
 );
 
 

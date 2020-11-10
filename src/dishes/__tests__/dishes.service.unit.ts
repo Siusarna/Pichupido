@@ -62,7 +62,7 @@ describe('getDishById tests', () => {
     }
   });
 });
-
+/*
 describe('getDishesByRestaurant tests', () => {
   test('should return array with dishes', async () => {
     const dish = await service.getDishesByRestaurant(1);
@@ -110,7 +110,7 @@ describe('getActiveDishesBySection tests', () => {
     expect(dish).toEqual({ sections: [] });
   });
 });
-
+*/
 describe('createDish tests', () => {
   test('should create dish', async () => {
     jest.spyOn(mockDishDb, 'insertDish');

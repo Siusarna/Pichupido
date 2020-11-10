@@ -18,7 +18,7 @@ export const createTable: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -34,20 +34,21 @@ export const getTable: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       200: {
         body: {
-          id: joi.number(),
-          restaurantId: joi.number(),
-          url: joi.string(),
-          qrCodeUrl: joi.string(),
+          id: joi.number().required(),
+          restaurantId: joi.number().required(),
+          url: joi.string().required(),
+          qrCodeUrl: joi.string().required(),
         },
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -63,20 +64,20 @@ export const getTablesByRestaurant: Router.Config = {
   },
   validate: {
     params: {
-      restaurantId: joi.number(),
+      restaurantId: joi.number().required(),
     },
     output: {
       200: {
         body: joi.array().items({
-          id: joi.number(),
-          restaurantId: joi.number(),
-          url: joi.string(),
-          qrCodeUrl: joi.string(),
+          id: joi.number().required(),
+          restaurantId: joi.number().required(),
+          url: joi.string().required(),
+          qrCodeUrl: joi.string().required(),
         }),
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -92,7 +93,8 @@ export const deleteTable: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
+      restaurantId: joi.number().required(),
     },
     output: {
       204: {
@@ -100,7 +102,7 @@ export const deleteTable: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },

@@ -12,12 +12,12 @@ export const createRestaurant: Router.Config = {
   validate: {
     type: 'json',
     body: {
-      name: joi.string(),
-      logo: joi.string(),
-      cover: joi.string(),
-      workingHours: joi.string(),
-      location: joi.string(),
-      description: joi.string(),
+      name: joi.string().required(),
+      logo: joi.string().required(),
+      cover: joi.string().required(),
+      workingHours: joi.string().required(),
+      location: joi.string().required(),
+      description: joi.string().required(),
     },
     output: {
       201: {
@@ -43,24 +43,24 @@ export const getRestaurant: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
     },
     output: {
       200: {
         body: {
-          id: joi.number(),
-          name: joi.string(),
-          adminId: joi.number(),
-          logo: joi.string(),
-          cover: joi.string(),
-          workingHours: joi.string(),
-          location: joi.string(),
-          description: joi.string(),
+          id: joi.number().required(),
+          name: joi.string().required(),
+          adminId: joi.number().required(),
+          logo: joi.string().required(),
+          cover: joi.string().required(),
+          workingHours: joi.string().required(),
+          location: joi.string().required(),
+          description: joi.string().required(),
         },
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -76,24 +76,24 @@ export const getAllRestaurants: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
     },
     output: {
       200: {
         body: joi.array().items({
-          id: joi.number(),
-          name: joi.string(),
-          adminId: joi.number(),
-          logo: joi.string(),
-          cover: joi.string(),
-          workingHours: joi.string(),
-          location: joi.string(),
-          description: joi.string(),
+          id: joi.number().required(),
+          name: joi.string().required(),
+          adminId: joi.number().required(),
+          logo: joi.string().required(),
+          cover: joi.string().required(),
+          workingHours: joi.string().required(),
+          location: joi.string().required(),
+          description: joi.string().required(),
         }),
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },
@@ -118,7 +118,7 @@ export const updateRestaurant: Router.Config = {
       description: joi.string(),
     },
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
     },
     output: {
       204: {
@@ -142,7 +142,7 @@ export const deleteRestaurant: Router.Config = {
   },
   validate: {
     params: {
-      id: joi.number(),
+      id: joi.number().required(),
     },
     output: {
       204: {
@@ -150,7 +150,7 @@ export const deleteRestaurant: Router.Config = {
       },
       400: {
         body: {
-          error: joi.string(),
+          error: joi.string().required(),
         },
       },
     },

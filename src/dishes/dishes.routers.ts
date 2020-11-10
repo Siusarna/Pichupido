@@ -7,37 +7,19 @@ import * as DishesConroller from './dishes.conrollers';
 const dishesRouter = Router();
 
 dishesRouter.get(
-  '/dishes/:id',
+  '/restaurants/:restaurantId/dishes/:id',
   DishesValidator.getDishById,
   DishesConroller.getDishById,
 );
 
 dishesRouter.get(
-  '/dishes/restaurants/:restaurantId',
+  '/restaurants/:restaurantId/dishes',
   DishesValidator.getDishesByRestaurant,
   DishesConroller.getDishesByRestaurant,
 );
 
-dishesRouter.get(
-  '/dishes/restaurants/:restaurantId/active',
-  DishesValidator.getActiveDishesByRestaurant,
-  DishesConroller.getActiveDishesByRestaurant,
-);
-
-dishesRouter.get(
-  '/dishes/sections/:sectionId',
-  DishesValidator.getDishesBySection,
-  DishesConroller.getDishesBySection,
-);
-
-dishesRouter.get(
-  '/dishes/sections/:sectionId/active',
-  DishesValidator.getActiveDishesBySection,
-  DishesConroller.getActiveDishesBySection,
-);
-
 dishesRouter.post(
-  '/dishes',
+  '/restaurants/:restaurantId/dishes',
   DishesValidator.createDish,
   checkAuth,
   checkAccess('admin'),
@@ -45,7 +27,7 @@ dishesRouter.post(
 );
 
 dishesRouter.put(
-  '/dishes/:id',
+  '/restaurants/:restaurantId/dishes/:id',
   DishesValidator.updateDish,
   checkAuth,
   checkAccess('admin'),
@@ -53,7 +35,7 @@ dishesRouter.put(
 );
 
 dishesRouter.delete(
-  '/dishes/:id',
+  '/restaurants/:restaurantId/dishes/:id',
   DishesValidator.deleteDish,
   checkAuth,
   checkAccess('admin'),
