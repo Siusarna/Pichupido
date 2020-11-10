@@ -24,7 +24,7 @@ describe('sections tests', () => {
     };
 
     const responsePost = await request(server.callback())
-      .post('/restaurants')
+      .post('/api/v1/restaurants')
       .type('json')
       .set('Cookie', cookies)
       .send(restaurant);
@@ -36,7 +36,7 @@ describe('sections tests', () => {
     const { id } = responsePost.body;
 
     const responseGet = await request(server.callback())
-      .get(`/restaurants/${id}`);
+      .get(`/api/v1/restaurants/${id}`);
     expect(responseGet.status).toBe(200);
     expect(responseGet.body).toMatchObject({
       ...restaurant,
@@ -46,21 +46,21 @@ describe('sections tests', () => {
     });
 
     const responseUpdate = await request(server.callback())
-      .put(`/restaurants/${id}`)
+      .put(`/api/v1/restaurants/${id}`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'NewName' });
     expect(responseUpdate.status).toBe(204);
 
     const responseGet2 = await request(server.callback())
-      .get(`/restaurants/${id}`);
+      .get(`/api/v1/restaurants/${id}`);
     expect(responseGet2.status).toBe(200);
     expect(responseGet2.body).toMatchObject({
       name: 'NewName'
     });
 
     const responseDelete = await request(server.callback())
-      .delete(`/restaurants/${id}`)
+      .delete(`/api/v1/restaurants/${id}`)
       .set('Cookie', cookies);
     expect(responseDelete.status).toBe(204);
 

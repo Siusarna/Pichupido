@@ -16,7 +16,7 @@ describe('accounts tests', () => {
     const email = `${user}@example.com`;
 
     const signUpResponse = await request(server.callback())
-      .post('/accounts/sign-up')
+      .post('/api/v1/accounts/sign-up')
       .type('json')
       .send({
         email,
@@ -30,7 +30,7 @@ describe('accounts tests', () => {
     expect(signUpResponse.status).toBe(204);
 
     const signInResponse = await request(server.callback())
-      .post('/accounts/sign-in')
+      .post('/api/v1/accounts/sign-in')
       .type('json')
       .send({
         email,
@@ -40,7 +40,7 @@ describe('accounts tests', () => {
     expect(signInResponse.status).toBe(200);
     const cookies = signInResponse.get('Set-Cookie');
     const profile = await request(server.callback())
-      .get('/accounts/profile')
+      .get('/api/v1/accounts/profile')
       .set('Cookie', cookies);
 
     expect(profile.body).toMatchObject({
@@ -52,7 +52,7 @@ describe('accounts tests', () => {
     });
 
     const deleteResponse = await request(server.callback())
-      .delete('/accounts/profile')
+      .delete('/api/v1/accounts/profile')
       .set('Cookie', cookies);
 
     expect(deleteResponse.status).toBe(204);
@@ -64,7 +64,7 @@ describe('accounts tests', () => {
     const email = `${user}@example.com`;
 
     const response = await request(server.callback())
-      .post('/accounts/sign-up')
+      .post('/api/v1/accounts/sign-up')
       .type('json')
       .send({
         email,
@@ -87,7 +87,7 @@ describe('accounts tests', () => {
     const email = `${user}@example.com`;
 
     const response = await request(server.callback())
-      .post('/accounts/sign-up')
+      .post('/api/v1/accounts/sign-up')
       .type('json')
       .send({
         email,

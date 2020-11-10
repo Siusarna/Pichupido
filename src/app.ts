@@ -36,6 +36,8 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
   const server = createServer(app.callback());
 
   const router = Router();
+  router.prefix('/api/v1');
+
   const generator = new SwaggerAPI();
 
   generator.addJoiRouter(accountsRouter);
@@ -52,7 +54,7 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
       description: 'API for creating and editing examples.',
       version: '0.0.1',
     },
-    basePath: '/',
+    basePath: '/api/v1',
     tags: [
       {
         name: 'accounts',
@@ -105,7 +107,7 @@ export async function start(app: Koa, cb: (server: Server) => void): Promise<Koa
       routePrefix: '/docs',
       hideTopbar: true,
       swaggerOptions: {
-        url: `${config.get('server.baseUrl')}/api.json`,
+        url: `${config.get('server.baseUrl')}/api/v1/api.json`,
       },
     }),
   );

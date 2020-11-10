@@ -17,14 +17,14 @@ describe('dishes tests', () => {
     const restaurantId = await tempResCreator.createRestaurant(cookies);
 
     const sectionResponse = await request(server.callback())
-      .post(`/restaurants/${restaurantId}/sections`)
+      .post(`/api/v1/restaurants/${restaurantId}/sections`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'Second dish' });
     const sectionId = sectionResponse.body.id;
 
     const menuResponse = await request(server.callback())
-      .post(`/restaurants/${restaurantId}/menus`)
+      .post(`/api/v1/restaurants/${restaurantId}/menus`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'Main' });
@@ -40,7 +40,7 @@ describe('dishes tests', () => {
     };
 
     const responsePost = await request(server.callback())
-      .post(`/restaurants/${restaurantId}/dishes`)
+      .post(`/api/v1/restaurants/${restaurantId}/dishes`)
       .type('json')
       .set('Cookie', cookies)
       .send(dish);
@@ -51,7 +51,7 @@ describe('dishes tests', () => {
     const { id } = responsePost.body;
 
     const responseGet = await request(server.callback())
-      .get(`/restaurants/${restaurantId}/dishes/${id}`);
+      .get(`/api/v1/restaurants/${restaurantId}/dishes/${id}`);
     expect(responseGet.status).toBe(200);
     expect(responseGet.body).toMatchObject({
       ...dish,
@@ -60,29 +60,29 @@ describe('dishes tests', () => {
     });
 
     const responseUpdate = await request(server.callback())
-      .put(`/restaurants/${restaurantId}/dishes/${id}`)
+      .put(`/api/v1/restaurants/${restaurantId}/dishes/${id}`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'Better Potato' });
     expect(responseUpdate.status).toBe(204);
 
     const responseGet2 = await request(server.callback())
-      .get(`/restaurants/${restaurantId}/dishes/${id}`);
+      .get(`/api/v1/restaurants/${restaurantId}/dishes/${id}`);
     expect(responseGet2.status).toBe(200);
     expect(responseGet2.body).toMatchObject({
       name: 'Better Potato'
     });
 
     const responseDelete = await request(server.callback())
-      .delete(`/restaurants/${restaurantId}/dishes/${id}`)
+      .delete(`/api/v1/restaurants/${restaurantId}/dishes/${id}`)
       .set('Cookie', cookies);
     expect(responseDelete.status).toBe(204);
 
     await request(server.callback())
-      .delete(`/sections/${sectionId}`)
+      .delete(`/api/v1/sections/${sectionId}`)
       .set('Cookie', cookies);
     await request(server.callback())
-      .delete(`/menu/${menuId}`)
+      .delete(`/api/v1/menu/${menuId}`)
       .set('Cookie', cookies);
     await tempResCreator.deleteRestaurant(cookies, restaurantId);
     await tempResCreator.deleteAcc(cookies);

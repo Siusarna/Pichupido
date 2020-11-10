@@ -9,7 +9,7 @@ beforeAll(async () => {
 });
 
 test('it works', async () => {
-  const response = await request(server.callback()).get('/');
+  const response = await request(server.callback()).get('/api/v1');
 
   expect(response.status).toBe(200);
   expect(response.type).toEqual('text/plain');

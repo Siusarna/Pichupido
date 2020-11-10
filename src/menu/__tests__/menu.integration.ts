@@ -20,7 +20,7 @@ describe('menu tests', () => {
     };
 
     const responsePost = await request(server.callback())
-      .post(`/restaurants/${restaurantId}/menus`)
+      .post(`/api/v1/restaurants/${restaurantId}/menus`)
       .type('json')
       .set('Cookie', cookies)
       .send(menu);
@@ -31,7 +31,7 @@ describe('menu tests', () => {
     const { id } = responsePost.body;
 
     const responseGet = await request(server.callback())
-      .get(`/restaurants/${restaurantId}/menus/${id}`);
+      .get(`/api/v1/restaurants/${restaurantId}/menus/${id}`);
     expect(responseGet.status).toBe(200);
     expect(responseGet.body).toEqual({
       id,
@@ -41,49 +41,49 @@ describe('menu tests', () => {
     });
 
     const responseUpdate = await request(server.callback())
-      .put(`/restaurants/${restaurantId}/menus/${id}`)
+      .put(`/api/v1/restaurants/${restaurantId}/menus/${id}`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'NewName' });
     expect(responseUpdate.status).toBe(204);
 
     const responseGet2 = await request(server.callback())
-      .get(`/restaurants/${restaurantId}/menus/${id}`);
+      .get(`/api/v1/restaurants/${restaurantId}/menus/${id}`);
     expect(responseGet2.status).toBe(200);
     expect(responseGet2.body).toMatchObject({
       name: 'NewName'
     });
 
     const responseActivate = await request(server.callback())
-      .put(`/restaurants/${restaurantId}/menus/${id}/activate`)
+      .put(`/api/v1/restaurants/${restaurantId}/menus/${id}/activate`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'NewName' });
     expect(responseActivate.status).toBe(204);
 
     const responseGet3 = await request(server.callback())
-      .get(`/restaurants/${restaurantId}/menus/${id}`);
+      .get(`/api/v1/restaurants/${restaurantId}/menus/${id}`);
     expect(responseGet3.status).toBe(200);
     expect(responseGet3.body).toMatchObject({
       isActive: true,
     });
 
     const responseDeactivate = await request(server.callback())
-      .put(`/restaurants/${restaurantId}/menus/${id}/deactivate`)
+      .put(`/api/v1/restaurants/${restaurantId}/menus/${id}/deactivate`)
       .type('json')
       .set('Cookie', cookies)
       .send({ name: 'NewName' });
     expect(responseDeactivate.status).toBe(204);
 
     const responseGet4 = await request(server.callback())
-      .get(`/restaurants/${restaurantId}/menus/${id}`);
+      .get(`/api/v1/restaurants/${restaurantId}/menus/${id}`);
     expect(responseGet4.status).toBe(200);
     expect(responseGet4.body).toMatchObject({
       isActive: false,
     });
 
     const responseDelete = await request(server.callback())
-      .delete(`/restaurants/${restaurantId}/menus/${id}`)
+      .delete(`/api/v1/restaurants/${restaurantId}/menus/${id}`)
       .set('Cookie', cookies);
     expect(responseDelete.status).toBe(204);
 

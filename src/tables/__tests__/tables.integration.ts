@@ -16,7 +16,7 @@ describe('tables tests', () => {
     const restaurantId = await tempResCreator.createRestaurant(cookies);
 
     const responsePost = await request(server.callback())
-      .post(`/restaurants/${restaurantId}/tables`)
+      .post(`/api/v1/restaurants/${restaurantId}/tables`)
       .type('json')
       .set('Cookie', cookies);
     expect(responsePost.status).toBe(201);
@@ -26,7 +26,7 @@ describe('tables tests', () => {
     const { id } = responsePost.body;
 
     const responseGet = await request(server.callback())
-      .get(`/restaurants/${restaurantId}/tables/${id}`);
+      .get(`/api/v1/restaurants/${restaurantId}/tables/${id}`);
     expect(responseGet.status).toBe(200);
     expect(responseGet.body).toMatchObject({
       id,
@@ -36,7 +36,7 @@ describe('tables tests', () => {
     });
 
     const responseDelete = await request(server.callback())
-      .delete(`/restaurants/${restaurantId}/tables/${id}`)
+      .delete(`/api/v1/restaurants/${restaurantId}/tables/${id}`)
       .set('Cookie', cookies);
     expect(responseDelete.status).toBe(204);
 

@@ -17,7 +17,7 @@ export class TemporaryResourseCreator {
     const email = `${user}@example.com`;
 
     await request(this.server.callback())
-      .post('/accounts/sign-up')
+      .post('/api/v1/accounts/sign-up')
       .type('json')
       .send({
         email,
@@ -28,7 +28,7 @@ export class TemporaryResourseCreator {
         role: 'admin'
       });
     const signInResponse = await request(this.server.callback())
-      .post('/accounts/sign-in')
+      .post('/api/v1/accounts/sign-in')
       .type('json')
       .send({
         email,
@@ -41,7 +41,7 @@ export class TemporaryResourseCreator {
 
   deleteAcc = async (cookies: string[]): Promise<void> => {
     await request(this.server.callback())
-      .delete('/accounts/profile')
+      .delete('/api/v1/accounts/profile')
       .set('Cookie', cookies);
   };
 
@@ -56,7 +56,7 @@ export class TemporaryResourseCreator {
     };
 
     const responsePost = await request(this.server.callback())
-      .post('/restaurants')
+      .post('/api/v1/restaurants')
       .type('json')
       .set('Cookie', cookies)
       .send(restaurant);
