@@ -107,7 +107,7 @@ Wireframes: https://www.figma.com/file/F6p99BkLdwmAFRdPSFJcbK/Wireframing-in-Fig
   * LetsEncrypt
   
   ## Web application architecture
-  ![GitHub Logo](/img/Screenshot_12.jpg)
+  ![GitHub Logo](/img/basic_architecture.jpeg)
   
   ## Database Structure
   ![Database Structure](/img/database_diagram.png)
