@@ -3,6 +3,13 @@
 ## Development view
 ![Development view](/img/development_view.jpg)
 
+## High-level decisions
+- User interacts with the application via one of separate front-ends: front-end for restaurant customer and front-end for admin
+- Both frontends use the same RESTful API, which uses router to give access to needed resources
+- Third-party API is used to generate QR-codes
+- AWS RDS is used as database
+- AWS S3 Bucket is used to store images
+
 ## General information
 Type of API - REST
 
