@@ -15,7 +15,7 @@ dishesRouter.get(
 dishesRouter.get(
   '/restaurants/:restaurantId/dishes',
   DishesValidator.getDishesByRestaurant,
-  DishesConroller.getDishesByRestaurant,
+  DishesConroller.getDishes,
 );
 
 dishesRouter.post(

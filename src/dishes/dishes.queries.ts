@@ -26,6 +26,56 @@ export const getDishById = async (id: number): Promise<Dish> => {
   `, [id])).rows[0];
 }
 
+export const getDishes = async (params: {
+  restaurantId: number | undefined,
+  sectionId: number | undefined,
+  active: boolean | undefined,
+} & { [key: string]: number | boolean | undefined }): Promise<Dish[]> => {
+  const [vals, reqs] = Object.keys(params)
+    .map(key => ({
+      key,
+      value: params[key],
+    }))
+    .filter(unit => unit.value !== undefined)
+    .map((unit, i) => {
+      if (unit.key === 'restaurantId') {
+        return {
+          req: `Menu.restaurant_id = $${i + 1}`,
+          value: unit.value,
+        }
+      } else if (unit.key === 'sectionId') {
+        return {
+          req: `section_id =  $${i + 1}`,
+          value: unit.value,
+        }
+      } else if (unit.key === 'active') {
+        return {
+          req: `Menu.active = $${i + 1}`,
+          value: unit.value,
+        }
+      }
+      return;
+    })
+    .reduce((prev, curr) => {
+      const [vals, reqs] = prev;
+      if (curr?.value === undefined || curr?.req === undefined) return prev;
+      (vals as (number | boolean)[]).push(curr?.value);
+      (reqs as (string)[]).push(curr?.req);
+      return [vals, reqs];
+    }, Array<Array<number | boolean> | Array<string>>(Array<number | boolean>(), Array<string>()));
+
+  const whereClause = reqs.join(' AND ');
+
+  const selectClause = getSelectClause(dishProps);
+  return (await query(`
+  SELECT ${selectClause} 
+  FROM Dish
+  INNER JOIN Menu ON Dish.menu_id = Menu.id
+  INNER JOIN Dish_section ON Dish.section_id = Dish_section.id
+  WHERE ${whereClause}
+  `, vals)).rows;
+}
+
 export const getDishesByRestaurant = async (restaurantId: number): Promise<Dish[]> => {
   const selectClause = getSelectClause(dishProps);
   return (await query(`

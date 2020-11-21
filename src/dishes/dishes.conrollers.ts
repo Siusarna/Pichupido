@@ -9,6 +9,14 @@ export const getDishById: Middleware = async (ctx) => {
   }
 };
 
+export const getDishes: Middleware = async (ctx) => {
+  try {
+    ctx.body = await DishesServices.getDishes({ ...ctx.params, ...ctx.request.query});
+  } catch (e) {
+    ctx.throw(400, e);
+  }
+};
+
 export const getDishesByRestaurant: Middleware = async (ctx) => {
   try {
     ctx.body = await DishesServices.getDishesByRestaurant(ctx.params.restaurantId);
@@ -46,7 +54,7 @@ export const createDish: Middleware = async (ctx) => {
     const id = await DishesServices.createDish(ctx.request.body, ctx.state.restaurant.id);
     ctx.body = { id };
     ctx.status = 201;
-  } catch (e) {
+  } catch (e) {3
     ctx.throw(400, e);
   }
 };

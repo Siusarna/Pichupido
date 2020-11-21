@@ -50,6 +50,14 @@ export const getDishById = async (id: number): Promise<Dish> => {
   return dish;
 };
 
+export const getDishes = async (params: {
+  restaurantId: number | undefined,
+  sectionId: number | undefined,
+  active: boolean | undefined,
+}): Promise<Dishes> => {
+  return formatDishArray(await queries.getDishes(params));
+};
+
 export const getDishesByRestaurant = async (restaurantId: number): Promise<Dishes> => {
   return formatDishArray(await queries.getDishesByRestaurant(restaurantId));
 };
