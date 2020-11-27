@@ -1,0 +1,1358 @@
+Statistical profiling result from isolate-0x62529b0-15889-v8.log, (9590 ticks, 19 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   6186   64.5%          /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+    117    1.2%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      8    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      1    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    268    2.8%    8.2%  LazyCompile: *scanJsDocToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10665:32
+    268    2.8%    8.2%  LazyCompile: *scan /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9974:22
+    116    1.2%    3.5%  LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+     49    0.5%    1.5%  LazyCompile: *iterateCommentRanges /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9195:34
+     49    0.5%    1.5%  LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+     40    0.4%    1.2%  LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+     34    0.4%    1.0%  LazyCompile: *declareSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39321:31
+     28    0.3%    0.9%  LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+     26    0.3%    0.8%  LazyCompile: *createIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28477:34
+     23    0.2%    0.7%  LazyCompile: *visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+     23    0.2%    0.7%  LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+     22    0.2%    0.7%  LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+     20    0.2%    0.6%  LazyCompile: *scanString /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9609:28
+     17    0.2%    0.5%  LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+     14    0.1%    0.4%  LazyCompile: *getTransformFlagsSubtreeExclusions /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:24306:48
+     14    0.1%    0.4%  LazyCompile: *bindParentToChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19069:35
+     13    0.1%    0.4%  LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+     13    0.1%    0.4%  LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+     10    0.1%    0.3%  LazyCompile: *bindPropertyWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41387:36
+      9    0.1%    0.3%  LazyCompile: *string /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-reader.js:30:11
+      9    0.1%    0.3%  LazyCompile: *setTextRangePosEnd /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19012:32
+      9    0.1%    0.3%  LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28314:27
+      9    0.1%    0.3%  LazyCompile: *getSourceTextOfNodeFromSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:13179:47
+      9    0.1%    0.3%  LazyCompile: *createToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20364:29
+      9    0.1%    0.3%  LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      9    0.1%    0.3%  LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+      8    0.1%    0.2%  LazyCompile: *isUnaryExpressionKind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:12261:35
+      8    0.1%    0.2%  LazyCompile: *handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+      8    0.1%    0.2%  LazyCompile: *getDeclarationName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39237:36
+      7    0.1%    0.2%  LazyCompile: *resolve path.js:973:10
+      7    0.1%    0.2%  LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      7    0.1%    0.2%  LazyCompile: *isListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28620:31
+      6    0.1%    0.2%  LazyCompile: *visitNodes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27030:24
+      6    0.1%    0.2%  LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      6    0.1%    0.2%  LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      6    0.1%    0.2%  LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      6    0.1%    0.2%  LazyCompile: *createBaseNamedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20124:44
+      5    0.1%    0.2%  LazyCompile: *removeListener events.js:450:28
+      5    0.1%    0.2%  LazyCompile: *pipelineEmitWithSourceMap /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:101715:43
+      5    0.1%    0.2%  LazyCompile: *parseObjectLiteralElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31681:43
+      5    0.1%    0.2%  LazyCompile: *parse /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:28:10
+      5    0.1%    0.2%  LazyCompile: *nextToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28246:27
+      5    0.1%    0.2%  LazyCompile: *isTypeMemberStart /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29742:35
+      5    0.1%    0.2%  LazyCompile: *hidden internal/errors.js:280:25
+      5    0.1%    0.2%  LazyCompile: *hasExtendedUnicodeEscape /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9385:48
+      5    0.1%    0.2%  LazyCompile: *getJSDocCommentRanges /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:13743:35
+      5    0.1%    0.2%  LazyCompile: *createPropertySignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20590:41
+      5    0.1%    0.2%  LazyCompile: *createNodeArray /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20085:33
+      5    0.1%    0.2%  LazyCompile: *bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      4    0.0%    0.1%  LazyCompile: *writeText /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:16307:27
+      4    0.0%    0.1%  LazyCompile: *speculationHelper /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28281:35
+      4    0.0%    0.1%  LazyCompile: *parseTypeOrTypePredicate /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30239:42
+      4    0.0%    0.1%  LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      4    0.0%    0.1%  LazyCompile: *parseModifiers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32714:32
+      4    0.0%    0.1%  LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      4    0.0%    0.1%  LazyCompile: *parseAssignmentExpressionOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30382:51
+      4    0.0%    0.1%  LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10788:27
+      4    0.0%    0.1%  LazyCompile: *isStartOfStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32160:36
+      4    0.0%    0.1%  LazyCompile: *isConflictMarkerTrivia /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9118:36
+      4    0.0%    0.1%  LazyCompile: *emit events.js:262:44
+      4    0.0%    0.1%  LazyCompile: *createSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:12732:31
+      4    0.0%    0.1%  LazyCompile: *computeLineOfPosition /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:8923:35
+      4    0.0%    0.1%  LazyCompile: *combinePaths /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6833:26
+      3    0.0%    0.1%  LazyCompile: *token /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28236:23
+      3    0.0%    0.1%  LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+      3    0.0%    0.1%  LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      3    0.0%    0.1%  LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      3    0.0%    0.1%  LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      3    0.0%    0.1%  LazyCompile: *parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      3    0.0%    0.1%  LazyCompile: *normalizePath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6891:27
+      3    0.0%    0.1%  LazyCompile: *isPropertyName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:11966:28
+      3    0.0%    0.1%  LazyCompile: *isInJSFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:14479:24
+      3    0.0%    0.1%  LazyCompile: *hasDynamicName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:15591:28
+      3    0.0%    0.1%  LazyCompile: *getNodePos /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28224:28
+      3    0.0%    0.1%  LazyCompile: *getEffectiveModifierFlags /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:16974:39
+      3    0.0%    0.1%  LazyCompile: *finishNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28437:28
+      3    0.0%    0.1%  LazyCompile: *declareModuleMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39440:37
+      3    0.0%    0.1%  LazyCompile: *createPrinter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:97788:27
+      3    0.0%    0.1%  LazyCompile: *createNodeArray /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28432:33
+      3    0.0%    0.1%  LazyCompile: *bindParentToChildIgnoringJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19054:48
+      3    0.0%    0.1%  LazyCompile: *bindParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41893:31
+      3    0.0%    0.1%  LazyCompile: *_storeHeader _http_outgoing.js:358:22
+      3    0.0%    0.1%  LazyCompile: *_clone /home/vladhmara/Repos/Pichupido/node_modules/clone/clone.js:73:18
+      3    0.0%    0.1%  LazyCompile: *EventEmitter.emit domain.js:475:39
+      2    0.0%    0.1%  RegExp: ^\s*(?:\/|\*)*\s*@(ts-expect-error|ts-ignore)
+      2    0.0%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      2    0.0%    0.1%  LazyCompile: *toPath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6906:20
+      2    0.0%    0.1%  LazyCompile: *stat internal/modules/cjs/loader.js:149:14
+      2    0.0%    0.1%  LazyCompile: *remove internal/linkedlist.js:15:16
+      2    0.0%    0.1%  LazyCompile: *relative path.js:1052:11
+      2    0.0%    0.1%  LazyCompile: *propagatePropertyNameFlagsOfChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:24282:47
+      2    0.0%    0.1%  LazyCompile: *parseUpdateExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31028:39
+      2    0.0%    0.1%  LazyCompile: *parseTokenNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28400:32
+      2    0.0%    0.1%  LazyCompile: *parseRow /home/vladhmara/Repos/Pichupido/node_modules/pg/lib/result.js:62:11
+      2    0.0%    0.1%  LazyCompile: *parsePropertyNameWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28514:41
+      2    0.0%    0.1%  LazyCompile: *parsePropertyName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28528:35
+      2    0.0%    0.1%  LazyCompile: *parseMemberExpressionRest /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31458:43
+      2    0.0%    0.1%  LazyCompile: *parseLiteralLikeNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29321:38
+      2    0.0%    0.1%  LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      2    0.0%    0.1%  LazyCompile: *parseFunctionOrConstructorType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29910:48
+      2    0.0%    0.1%  LazyCompile: *parseExpected /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28348:31
+      2    0.0%    0.1%  LazyCompile: *normalizeString path.js:52:25
+      2    0.0%    0.1%  LazyCompile: *noParse /home/vladhmara/Repos/Pichupido/node_modules/pg-types/index.js:17:18
+      2    0.0%    0.1%  LazyCompile: *nextTokenCanFollowModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28567:44
+      2    0.0%    0.1%  LazyCompile: *nextTick internal/process/task_queues.js:101:18
+      2    0.0%    0.1%  LazyCompile: *isListTerminator /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28755:34
+      2    0.0%    0.1%  LazyCompile: *isDigit /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:8995:21
+      2    0.0%    0.1%  LazyCompile: *isClassMemberStart /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32603:36
+      2    0.0%    0.1%  LazyCompile: *isArray /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:1667:21
+      2    0.0%    0.1%  LazyCompile: *getTextOfNodeFromSourceText /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:13187:41
+      2    0.0%    0.1%  LazyCompile: *getNonAssignedNameOfDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:11366:45
+      2    0.0%    0.1%  LazyCompile: *getIdentifierToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9901:36
+      2    0.0%    0.1%  LazyCompile: *forEachChildRecursively /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27535:37
+      2    0.0%    0.1%  LazyCompile: *findAncestor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:12796:26
+      2    0.0%    0.1%  LazyCompile: *emitSourcePos /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:101774:31
+      2    0.0%    0.1%  LazyCompile: *createBaseGenericNamedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20150:51
+      2    0.0%    0.1%  LazyCompile: *convertPropertyValueToJson /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:36473:44
+      2    0.0%    0.1%  LazyCompile: *bindFunctionOrConstructorType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40740:47
+      2    0.0%    0.1%  LazyCompile: *assert /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:2479:24
+      2    0.0%    0.1%  LazyCompile: *addMapping /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:78916:28
+      2    0.0%    0.1%  LazyCompile: *_handleDataRow /home/vladhmara/Repos/Pichupido/node_modules/pg/lib/client.js:334:17
+      2    0.0%    0.1%  LazyCompile: *TokenOrIdentifierObject /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:142977:41
+      2    0.0%    0.1%  LazyCompile: *Router.match /home/vladhmara/Repos/Pichupido/node_modules/@koa/router/lib/router.js:651:35
+      2    0.0%    0.1%  LazyCompile: *Readable.read _stream_readable.js:384:35
+      2    0.0%    0.1%  LazyCompile: *Module._nodeModulePaths internal/modules/cjs/loader.js:592:37
+      1    0.0%    0.0%  RegExp: ^\s*\/\/\/?\s*@(ts-expect-error|ts-ignore)
+      1    0.0%    0.0%  RegExp: ^\/api\/v1\/restaurants\/((?:[^\/]+?))\/sections(?:\/(?=$))?$
+      1    0.0%    0.0%  RegExp: ^\/api\/v1\/restaurants\/((?:[^\/]+?))\/menus\/((?:[^\/]+?))\/activate(?:\/(?=$))?$
+      1    0.0%    0.0%  RegExp: ^\/api\/v1(?:\/(?=$))?$
+      1    0.0%    0.0%  RegExp: ^\.\.?($|[\\/])
+      1    0.0%    0.0%  RegExp: ^\+
+      1    0.0%    0.0%  RegExp: ^#!.*
+      1    0.0%    0.0%  RegExp: [^\u0000-\u007F]
+      1    0.0%    0.0%  LazyCompile: *writeOrBuffer _stream_writable.js:334:23
+      1    0.0%    0.0%  LazyCompile: *write /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:16317:23
+      1    0.0%    0.0%  LazyCompile: *tryParse /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28322:26
+      1    0.0%    0.0%  LazyCompile: *tryAddingExtensions /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38581:33
+      1    0.0%    0.0%  LazyCompile: *toPath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103130:24
+      1    0.0%    0.0%  LazyCompile: *some /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:936:18
+      1    0.0%    0.0%  LazyCompile: *slice buffer.js:604:12
+      1    0.0%    0.0%  LazyCompile: *skipTrivia /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9037:24
+      1    0.0%    0.0%  LazyCompile: *setValueDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:14900:33
+      1    0.0%    0.0%  LazyCompile: *setParent /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19032:23
+      1    0.0%    0.0%  LazyCompile: *setHeader _http_outgoing.js:541:57
+      1    0.0%    0.0%  LazyCompile: *setContextFlag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28105:32
+      1    0.0%    0.0%  LazyCompile: *resolveNameHelper /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:43778:35
+      1    0.0%    0.0%  LazyCompile: *reducePathComponents /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6790:34
+      1    0.0%    0.0%  LazyCompile: *reduceEachLeadingCommentRange /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9300:43
+      1    0.0%    0.0%  LazyCompile: *reScanGreaterToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10432:36
+      1    0.0%    0.0%  LazyCompile: *propagateChildrenFlags /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:24291:36
+      1    0.0%    0.0%  LazyCompile: *pipelineEmitWithHint /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:98140:38
+      1    0.0%    0.0%  LazyCompile: *parseUnionTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30182:40
+      1    0.0%    0.0%  LazyCompile: *parseTypeParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29509:37
+      1    0.0%    0.0%  LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1    0.0%    0.0%  LazyCompile: *parseTypeAnnotation /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30286:37
+      1    0.0%    0.0%  LazyCompile: *parseTagComments /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33559:42
+      1    0.0%    0.0%  LazyCompile: *parseRightSideOfDot /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29237:37
+      1    0.0%    0.0%  LazyCompile: *parseOptional /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28373:31
+      1    0.0%    0.0%  LazyCompile: *parseLiteralTypeNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29926:38
+      1    0.0%    0.0%  LazyCompile: *parseKeywordAndNoDot /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29922:38
+      1    0.0%    0.0%  LazyCompile: *parseIntersectionTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30179:47
+      1    0.0%    0.0%  LazyCompile: *parseIdentifierName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28506:37
+      1    0.0%    0.0%  LazyCompile: *parseDecorators /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32682:33
+      1    0.0%    0.0%  LazyCompile: *parseDataRowMessage /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:197:24
+      1    0.0%    0.0%  LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      1    0.0%    0.0%  LazyCompile: *parse querystring.js:261:15
+      1    0.0%    0.0%  LazyCompile: *parenthesizeTypeArguments /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19485:45
+      1    0.0%    0.0%  LazyCompile: *onwrite _stream_writable.js:394:17
+      1    0.0%    0.0%  LazyCompile: *normalizeSlashes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6782:30
+      1    0.0%    0.0%  LazyCompile: *nodeIsMissing /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:13034:27
+      1    0.0%    0.0%  LazyCompile: *nextTokenJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28254:32
+      1    0.0%    0.0%  LazyCompile: *modifierToFlag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:17042:28
+      1    0.0%    0.0%  LazyCompile: *levenshteinWithMax /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:2088:32
+      1    0.0%    0.0%  LazyCompile: *isUnambiguouslyStartOfFunctionType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30211:52
+      1    0.0%    0.0%  LazyCompile: *isTemplateStartOfTaggedTemplate /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31490:49
+      1    0.0%    0.0%  LazyCompile: *isStartOfLeftHandSideExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30290:49
+      1    0.0%    0.0%  LazyCompile: *isPropertyAccessExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:25728:40
+      1    0.0%    0.0%  LazyCompile: *isNonLocalAlias /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:44832:33
+      1    0.0%    0.0%  LazyCompile: *isModifierKind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:11928:28
+      1    0.0%    0.0%  LazyCompile: *isLineBreak /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:8978:25
+      1    0.0%    0.0%  LazyCompile: *isJSDocTypeExpressionOrChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:13184:42
+      1    0.0%    0.0%  LazyCompile: *isJSDocTypeExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:26150:35
+      1    0.0%    0.0%  LazyCompile: *isFunctionLike /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:11983:28
+      1    0.0%    0.0%  LazyCompile: *isExpressionKind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:12297:30
+      1    0.0%    0.0%  LazyCompile: *isDynamicName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:15596:27
+      1    0.0%    0.0%  LazyCompile: *isDoubleQuotedString /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:36542:38
+      1    0.0%    0.0%  LazyCompile: *isDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32081:31
+      1    0.0%    0.0%  LazyCompile: *isBindingPattern /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:12105:30
+      1    0.0%    0.0%  LazyCompile: *initializeState /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27879:33
+      1    0.0%    0.0%  LazyCompile: *inContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28187:27
+      1    0.0%    0.0%  LazyCompile: *hasUnicodeEscape /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9384:40
+      1    0.0%    0.0%  LazyCompile: *hasPrecedingJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28227:42
+      1    0.0%    0.0%  LazyCompile: *hasHooks internal/async_hooks.js:435:18
+      1    0.0%    0.0%  LazyCompile: *handleDataRow /home/vladhmara/Repos/Pichupido/node_modules/pg/lib/query.js:79:16
+      1    0.0%    0.0%  LazyCompile: *getSyntacticModifierFlagsNoCache /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:17023:46
+      1    0.0%    0.0%  LazyCompile: *getSymbolOfNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:45426:33
+      1    0.0%    0.0%  LazyCompile: *getSourceFileOfNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:12957:33
+      1    0.0%    0.0%  LazyCompile: *getNodeLinks /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:43503:30
+      1    0.0%    0.0%  LazyCompile: *getModifierFlagsWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:16957:36
+      1    0.0%    0.0%  LazyCompile: *getLinesBetweenNodes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:101021:38
+      1    0.0%    0.0%  LazyCompile: *getFlowTypeOfReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61600:40
+      1    0.0%    0.0%  LazyCompile: *getExportSymbolOfValueSymbolIfExported /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:45559:56
+      1    0.0%    0.0%  LazyCompile: *getEscapedTextOfIdentifierOrLiteral /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:15659:49
+      1    0.0%    0.0%  LazyCompile: *getEncodedRootLength /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6573:34
+      1    0.0%    0.0%  LazyCompile: *getCombinedNodeFlags /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:11175:34
+      1    0.0%    0.0%  LazyCompile: *getCanonicalFileName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104652:38
+      1    0.0%    0.0%  LazyCompile: *getBinaryOperatorPrecedence /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:16039:41
+      1    0.0%    0.0%  LazyCompile: *getAssignmentDeclarationPropertyAccessKind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:14849:56
+      1    0.0%    0.0%  LazyCompile: *get _stream_writable.js:698:8
+      1    0.0%    0.0%  LazyCompile: *formatWithOptionsInternal internal/util/inspect.js:1881:35
+      1    0.0%    0.0%  LazyCompile: *forEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:379:21
+      1    0.0%    0.0%  LazyCompile: *findSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104269:32
+      1    0.0%    0.0%  LazyCompile: *fileExtensionIs /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6532:29
+      1    0.0%    0.0%  LazyCompile: *emitList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:100585:26
+      1    0.0%    0.0%  LazyCompile: *emitIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:98698:32
+      1    0.0%    0.0%  LazyCompile: *dispatch /home/vladhmara/Repos/Pichupido/node_modules/koa-compose/index.js:35:23
+      1    0.0%    0.0%  LazyCompile: *dirname path.js:1127:10
+      1    0.0%    0.0%  LazyCompile: *declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      1    0.0%    0.0%  LazyCompile: *declareClassMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40673:36
+      1    0.0%    0.0%  LazyCompile: *cstring /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-reader.js:35:12
+      1    0.0%    0.0%  LazyCompile: *createQualifiedName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20484:37
+      1    0.0%    0.0%  LazyCompile: *createParameterDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20538:44
+      1    0.0%    0.0%  LazyCompile: *createBaseIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20279:38
+      1    0.0%    0.0%  LazyCompile: *createBaseFunctionLikeDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20175:51
+      1    0.0%    0.0%  LazyCompile: *connectionListenerInternal _http_server.js:402:36
+      1    0.0%    0.0%  LazyCompile: *cleanup /home/vladhmara/Repos/Pichupido/node_modules/ee-first/index.js:58:19
+      1    0.0%    0.0%  LazyCompile: *checkExpressionWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:70007:39
+      1    0.0%    0.0%  LazyCompile: *charSize /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10849:22
+      1    0.0%    0.0%  LazyCompile: *captureErrorCalculationState /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:56908:50
+      1    0.0%    0.0%  LazyCompile: *applyStyle /home/vladhmara/Repos/Pichupido/node_modules/chalk/index.js:159:20
+      1    0.0%    0.0%  LazyCompile: *addWorkItem /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27549:33
+      1    0.0%    0.0%  LazyCompile: *addDeclarationToSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39217:40
+      1    0.0%    0.0%  LazyCompile: *_loop_4 /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:36409:36
+      1    0.0%    0.0%  LazyCompile: *_instanceof /home/vladhmara/Repos/Pichupido/node_modules/clone/clone.js:4:21
+      1    0.0%    0.0%  LazyCompile: *_addListener events.js:342:22
+      1    0.0%    0.0%  LazyCompile: *Module._findPath internal/modules/cjs/loader.js:461:28
+      1    0.0%    0.0%  LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39023:48
+
+ [C++]:
+   ticks  total  nonlib   name
+   1424   14.8%   43.4%  epoll_pwait
+     62    0.6%    1.9%  __write
+     25    0.3%    0.8%  fwrite
+     21    0.2%    0.6%  __libc_malloc
+     18    0.2%    0.5%  shutdown
+     18    0.2%    0.5%  __pthread_cond_timedwait
+     15    0.2%    0.5%  __mprotect
+     15    0.2%    0.5%  __libc_read
+     10    0.1%    0.3%  __GI___pthread_mutex_unlock
+      9    0.1%    0.3%  __GI___pthread_mutex_lock
+      7    0.1%    0.2%  __libc_write
+      6    0.1%    0.2%  epoll_ctl
+      6    0.1%    0.2%  accept4
+      6    0.1%    0.2%  __pthread_cond_signal
+      5    0.1%    0.2%  syscall
+      5    0.1%    0.2%  __lll_lock_wait
+      4    0.0%    0.1%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      4    0.0%    0.1%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      4    0.0%    0.1%  cfree
+      3    0.0%    0.1%  std::ostream::sentry::~sentry()
+      3    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      3    0.0%    0.1%  operator new[](unsigned long)
+      3    0.0%    0.1%  operator new(unsigned long)
+      3    0.0%    0.1%  __pthread_cond_wait
+      2    0.0%    0.1%  operator delete(void*)
+      2    0.0%    0.1%  __pthread_cond_broadcast
+      2    0.0%    0.1%  __munmap
+      2    0.0%    0.1%  __dynamic_cast
+      2    0.0%    0.1%  _IO_file_xsputn
+      1    0.0%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      1    0.0%    0.0%  std::ostream::put(char)
+      1    0.0%    0.0%  std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+      1    0.0%    0.0%  posix_memalign
+      1    0.0%    0.0%  operator delete[](void*)
+      1    0.0%    0.0%  fputc
+      1    0.0%    0.0%  fflush
+      1    0.0%    0.0%  do_futex_wait.constprop.0
+      1    0.0%    0.0%  __new_sem_wait
+      1    0.0%    0.0%  __mmap
+      1    0.0%    0.0%  __getpid
+      1    0.0%    0.0%  _IO_default_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1558   16.2%   47.5%  JavaScript
+   1701   17.7%   51.9%  C++
+    466    4.9%   14.2%  GC
+   6312   65.8%          Shared libraries
+     19    0.2%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     55   34.0%    0.6%  __write
+     21   13.0%    0.2%  fwrite
+     15    9.3%    0.2%  __libc_malloc
+     14    8.6%    0.1%  __mprotect
+      7    4.3%    0.1%  __libc_write
+      6    3.7%    0.1%  __GI___pthread_mutex_lock
+      5    3.1%    0.1%  syscall
+      5    3.1%    0.1%  __GI___pthread_mutex_unlock
+      4    2.5%    0.0%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      4    2.5%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      3    1.9%    0.0%  std::ostream::sentry::~sentry()
+      3    1.9%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const
+      3    1.9%    0.0%  operator new[](unsigned long)
+      2    1.2%    0.0%  operator new(unsigned long)
+      2    1.2%    0.0%  operator delete(void*)
+      2    1.2%    0.0%  cfree
+      2    1.2%    0.0%  __pthread_cond_signal
+      2    1.2%    0.0%  __dynamic_cast
+      1    0.6%    0.0%  std::ostream::sentry::sentry(std::ostream&)
+      1    0.6%    0.0%  std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
+      1    0.6%    0.0%  posix_memalign
+      1    0.6%    0.0%  operator delete[](void*)
+      1    0.6%    0.0%  fputc
+      1    0.6%    0.0%  fflush
+      1    0.6%    0.0%  _IO_file_xsputn
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   6186   64.5%  /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+   1986   32.1%    /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+    281   14.1%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:976:18
+    281  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1029:37
+    264   94.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1084:37
+    158   59.8%            LazyCompile: ~require.extensions.<computed> /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:550:40
+    106   40.2%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:928:33
+     17    6.0%          LazyCompile: ~m._compile /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:554:31
+     17  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1084:37
+    122    6.1%      /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+     22   18.0%        LazyCompile: *normalizePath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6891:27
+      8   36.4%          LazyCompile: *toPath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6906:20
+      2   25.0%            LazyCompile: ~getOrCreateCacheForDirectory /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38084:46
+      2   25.0%            LazyCompile: ~fileExists /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:143920:32
+      1   12.5%            LazyCompile: ~toPath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103130:24
+      1   12.5%            LazyCompile: ~getOrCreateSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:143942:43
+      1   12.5%            LazyCompile: ~get /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38104:25
+      1   12.5%            LazyCompile: *findSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104269:32
+      5   22.7%          LazyCompile: *toPath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103130:24
+      3   60.0%            LazyCompile: ~processImportedModules /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104655:40
+      1   20.0%            LazyCompile: ~getSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103651:31
+      1   20.0%            LazyCompile: ~findSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104269:32
+      3   13.6%          LazyCompile: ~toPath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6906:20
+      2   66.7%            LazyCompile: ~toPath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103130:24
+      1   33.3%            LazyCompile: ~fileExists /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:143920:32
+      3   13.6%          LazyCompile: ~loadModuleFromSpecificNodeModulesDirectory /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38776:56
+      3  100.0%            LazyCompile: ~loadModuleFromImmediateNodeModulesDirectory /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38754:57
+      1    4.5%          LazyCompile: ~initializeState /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27879:33
+      1  100.0%            LazyCompile: ~parseJsonText /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27814:31
+      1    4.5%          LazyCompile: *findSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104269:32
+      1  100.0%            LazyCompile: ~processImportedModules /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104655:40
+      1    4.5%          LazyCompile: *fileExists /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:143920:32
+      1  100.0%            LazyCompile: ~getPackageJsonInfo /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38630:32
+      6    4.9%        LazyCompile: ~toFileNameLowerCase /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:1748:33
+      4   66.7%          LazyCompile: ~findSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104269:32
+      3   75.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104232:65
+      1   25.0%            LazyCompile: ~processImportedModules /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104655:40
+      2   33.3%          LazyCompile: *findSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104269:32
+      1   50.0%            LazyCompile: ~processImportedModules /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104655:40
+      1   50.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104232:65
+      6    4.9%        LazyCompile: *createIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28477:34
+      3   50.0%          LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      3  100.0%            LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1   16.7%          LazyCompile: *parseTypeReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29352:36
+      1  100.0%            LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1   16.7%          LazyCompile: *parsePropertyNameWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28514:41
+      1  100.0%            LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      1   16.7%          LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1  100.0%            LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      5    4.1%        LazyCompile: ~module.exports /home/vladhmara/Repos/Pichupido/node_modules/humanize-number/index.js:2:26
+      5  100.0%          LazyCompile: ~time /home/vladhmara/Repos/Pichupido/node_modules/koa-logger/index.js:152:15
+      5  100.0%            LazyCompile: ~log /home/vladhmara/Repos/Pichupido/node_modules/koa-logger/index.js:108:14
+      5    4.1%        LazyCompile: ~format /home/vladhmara/Repos/Pichupido/node_modules/bytes/index.js:84:16
+      5  100.0%          LazyCompile: ~bytes /home/vladhmara/Repos/Pichupido/node_modules/bytes/index.js:54:15
+      5  100.0%            LazyCompile: ~log /home/vladhmara/Repos/Pichupido/node_modules/koa-logger/index.js:108:14
+      5    4.1%        LazyCompile: *declareSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39321:31
+      2   40.0%          LazyCompile: ~declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      1   50.0%            LazyCompile: ~bindPropertyOrMethodOrAccessor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41943:48
+      1   50.0%            LazyCompile: ~bindParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41893:31
+      1   20.0%          LazyCompile: ~declareModuleMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39440:37
+      1  100.0%            LazyCompile: ~bindBlockScopedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40806:44
+      1   20.0%          LazyCompile: *declareModuleMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39440:37
+      1  100.0%            LazyCompile: *bindBlockScopedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40806:44
+      1   20.0%          LazyCompile: *bindPropertyWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41387:36
+      1  100.0%            LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      3    2.5%        LazyCompile: ~pathComponents /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6719:28
+      3  100.0%          LazyCompile: ~getPathComponents /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6756:31
+      3  100.0%            LazyCompile: ~normalizePath /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6891:27
+      3    2.5%        LazyCompile: ~getSelectClause /home/vladhmara/Repos/Pichupido/build/src/libs/db/typeMapping.js:5:25
+      3  100.0%          LazyCompile: ~exports.getDishes /home/vladhmara/Repos/Pichupido/build/src/dishes/dishes.queries.js:28:21
+      3  100.0%            LazyCompile: ~exports.getDishes /home/vladhmara/Repos/Pichupido/build/src/dishes/dishes.service.js:75:21
+      3    2.5%        LazyCompile: ~escapeIdentifier /home/vladhmara/Repos/Pichupido/build/src/libs/db/escaping.js:16:26
+      3  100.0%          /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      3  100.0%            LazyCompile: ~escapeArray /home/vladhmara/Repos/Pichupido/build/src/libs/db/escaping.js:28:21
+      3    2.5%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      3  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:808:35
+      3  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:721:24
+      3    2.5%        LazyCompile: *Router.match /home/vladhmara/Repos/Pichupido/node_modules/@koa/router/lib/router.js:651:35
+      3  100.0%          LazyCompile: ~dispatch /home/vladhmara/Repos/Pichupido/node_modules/@koa/router/lib/router.js:317:35
+      3  100.0%            LazyCompile: *dispatch /home/vladhmara/Repos/Pichupido/node_modules/koa-compose/index.js:35:23
+      2    1.6%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:257:21
+      2  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:288:26
+      2  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:408:17
+      2    1.6%        LazyCompile: ~exports.getDishes /home/vladhmara/Repos/Pichupido/build/src/dishes/dishes.queries.js:28:21
+      2  100.0%          LazyCompile: ~exports.getDishes /home/vladhmara/Repos/Pichupido/build/src/dishes/dishes.service.js:75:21
+      2  100.0%            LazyCompile: ~exports.getDishes /home/vladhmara/Repos/Pichupido/build/src/dishes/dishes.conrollers.js:38:21
+      2    1.6%        LazyCompile: ~escapeString /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:16211:26
+      2  100.0%          LazyCompile: ~escapeNonAsciiString /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:16219:34
+      2  100.0%            LazyCompile: ~getLiteralText /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:13224:28
+      2    1.6%        LazyCompile: *pathComponents /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6719:28
+      1   50.0%          LazyCompile: ~getPathComponents /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6756:31
+      1  100.0%            LazyCompile: ~normalizePathAndParts /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6913:35
+      1   50.0%          LazyCompile: *findSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104269:32
+      1  100.0%            LazyCompile: *processImportedModules /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104655:40
+      2    1.6%        LazyCompile: *_handleDataRow /home/vladhmara/Repos/Pichupido/node_modules/pg/lib/client.js:334:17
+      2  100.0%          LazyCompile: *emit events.js:262:44
+      2  100.0%            LazyCompile: *EventEmitter.emit domain.js:475:39
+      2    1.6%        LazyCompile: *<anonymous> internal/per_context/primordials.js:23:10
+      2  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:288:26
+      2  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:408:17
+      2    1.6%        LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39023:48
+      2  100.0%          LazyCompile: *visitNodes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27030:24
+      2  100.0%            LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      2    1.6%        /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      2  100.0%          LazyCompile: ~Layer.match /home/vladhmara/Repos/Pichupido/node_modules/@koa/router/lib/layer.js:60:34
+      2  100.0%            LazyCompile: ~Router.match /home/vladhmara/Repos/Pichupido/node_modules/@koa/router/lib/router.js:651:35
+     73    3.7%      LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+     73  100.0%        LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+     69   94.5%          LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+     48   69.6%            LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+     18   26.1%            LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      2    2.9%            LazyCompile: *withJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27968:27
+      1    1.4%            LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      4    5.5%          LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+      3   75.0%            LazyCompile: ~doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      1   25.0%            LazyCompile: *doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+     62    3.1%      LazyCompile: ~slice buffer.js:604:12
+     58   93.5%        LazyCompile: ~toString buffer.js:772:46
+     33   56.9%          LazyCompile: ~readFileWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6270:36
+     33  100.0%            LazyCompile: ~readFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6301:30
+     25   43.1%          LazyCompile: ~readFileSync fs.js:365:22
+     25  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1084:37
+      3    4.8%        LazyCompile: *parseDataRowMessage /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:197:24
+      3  100.0%          LazyCompile: ~handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+      3  100.0%            LazyCompile: ~parse /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:28:10
+      1    1.6%        LazyCompile: *string /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-reader.js:30:11
+      1  100.0%          LazyCompile: ~parseDataRowMessage /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:197:24
+      1  100.0%            LazyCompile: ~handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+     44    2.2%      LazyCompile: ~get length /home/vladhmara/Repos/Pichupido/node_modules/koa/lib/response.js:204:13
+     44  100.0%        LazyCompile: ~logger /home/vladhmara/Repos/Pichupido/node_modules/koa-logger/index.js:57:32
+     44  100.0%          /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+     44  100.0%            /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+     43    2.2%      LazyCompile: ~respond /home/vladhmara/Repos/Pichupido/node_modules/koa/lib/application.js:220:17
+     43  100.0%        LazyCompile: ~handleResponse /home/vladhmara/Repos/Pichupido/node_modules/koa/lib/application.js:166:28
+     43  100.0%          /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+     33   76.7%            LazyCompile: *processTicksAndRejections internal/process/task_queues.js:65:35
+     10   23.3%            LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:65:35
+     40    2.0%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+     40  100.0%        LazyCompile: ~Socket._writeGeneric net.js:758:42
+     40  100.0%          LazyCompile: ~Socket._writev net.js:790:36
+     40  100.0%            LazyCompile: ~doWrite _stream_writable.js:367:17
+     39    2.0%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+     34   87.2%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:296:29
+      3    8.8%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    5.9%          Eval: ~<anonymous> tty.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      2    5.9%          Eval: ~<anonymous> stream.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      2    5.9%          Eval: ~<anonymous> internal/worker.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      2    5.9%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      2    5.9%          Eval: ~<anonymous> crypto.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      2    5.9%          Eval: ~<anonymous> _http_client.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          LazyCompile: ~setupProcessObject internal/bootstrap/node.js:270:28
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.9%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:251:32
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.9%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:299:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.9%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:404:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:17:36
+      1    2.9%          LazyCompile: ~get fs.js:2104:8
+      1  100.0%            /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1    2.9%          Eval: ~<anonymous> tls.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/modules/cjs/helpers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/fs/streams.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/console/global.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> internal/cluster/master.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> https.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> fs.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> events.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      1    2.9%          Eval: ~<anonymous> _http_agent.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:263:27
+      5   12.8%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:212:25
+      5  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:31:26
+      5  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:721:24
+     32    1.6%      LazyCompile: *createIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28477:34
+      9   28.1%        LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      9  100.0%          LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      9  100.0%            LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      5   15.6%        LazyCompile: *parseIdentifierName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28506:37
+      3   60.0%          LazyCompile: ~parseEntityName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29219:33
+      3  100.0%            LazyCompile: ~parseEntityNameOfTypeReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29344:48
+      1   20.0%          LazyCompile: ~parseRightSideOfDot /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29237:37
+      1  100.0%            LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1   20.0%          LazyCompile: ~parsePropertyNameWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28514:41
+      1  100.0%            LazyCompile: ~parsePropertyName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28528:35
+      4   12.5%        LazyCompile: *parseRightSideOfDot /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29237:37
+      4  100.0%          LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      4  100.0%            LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      4   12.5%        LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      3   75.0%          LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      3  100.0%            LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1   25.0%          LazyCompile: *parseIntersectionTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30179:47
+      1  100.0%            LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      3    9.4%        LazyCompile: *parseTypeAliasDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32868:43
+      3  100.0%          LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      3  100.0%            LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      3    9.4%        LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      3  100.0%          LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      3  100.0%            LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      2    6.3%        LazyCompile: *parsePropertyNameWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28514:41
+      2  100.0%          LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      2  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1    3.1%        LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      1  100.0%          LazyCompile: ~parseParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29541:32
+      1  100.0%            LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1    3.1%        LazyCompile: *parseIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28503:33
+      1  100.0%          LazyCompile: ~parseTypeAliasDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32868:43
+      1  100.0%            LazyCompile: ~parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+     31    1.6%      LazyCompile: *scanJsDocToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10665:32
+     31  100.0%        LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+     31  100.0%          LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+     30   96.8%            LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+      1    3.2%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+     24    1.2%      LazyCompile: *addWorkItem /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27549:33
+     15   62.5%        LazyCompile: *visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+     12   80.0%          LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+     11   91.7%            LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      1    8.3%            LazyCompile: *forEachChildRecursively /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27535:37
+      3   20.0%          LazyCompile: ~forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      3  100.0%            LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      6   25.0%        LazyCompile: *visitNodes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27030:24
+      4   66.7%          LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      4  100.0%            LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      2   33.3%          LazyCompile: ~forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      2  100.0%            LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      3   12.5%        LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      3  100.0%          LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      3  100.0%            LazyCompile: ~getModuleInstanceState /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38962:36
+     22    1.1%      LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+     14   63.6%        LazyCompile: ~getModuleInstanceState /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38962:36
+     14  100.0%          LazyCompile: ~declareModuleSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40734:37
+     14  100.0%            LazyCompile: ~bindModuleDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40697:39
+      8   36.4%        LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      5   62.5%          LazyCompile: *bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      5  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      3   37.5%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      3  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+    112    1.8%    LazyCompile: ~forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+     54   48.2%      LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+     39   72.2%        LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+     18   46.2%          LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+     18  100.0%            LazyCompile: *visitNodes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27030:24
+     14   35.9%          LazyCompile: *visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+     14  100.0%            LazyCompile: ~forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      6   15.4%          LazyCompile: *forEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:379:21
+      6  100.0%            LazyCompile: ~bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1    2.6%          LazyCompile: ~forEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:379:21
+      1  100.0%            LazyCompile: ~bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+     12   22.2%        LazyCompile: *bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      9   75.0%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      5   55.6%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      2   22.2%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1   11.1%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39591:38
+      1   11.1%            LazyCompile: *visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+      3   25.0%          LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      3  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      3    5.6%        LazyCompile: ~bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      2   66.7%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   50.0%            LazyCompile: ~visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+      1   50.0%            LazyCompile: *visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+      1   33.3%          LazyCompile: ~bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+     32   28.6%      LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+     20   62.5%        LazyCompile: ~getModuleInstanceState /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38962:36
+     20  100.0%          LazyCompile: ~declareModuleSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40734:37
+     20  100.0%            LazyCompile: ~bindModuleDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40697:39
+      9   28.1%        LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      6   66.7%          LazyCompile: *bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      5   83.3%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   16.7%            LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      2   22.2%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      2  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1   11.1%          LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      1  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      2    6.3%        LazyCompile: ~bindJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41127:27
+      2  100.0%          LazyCompile: ~bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      1   50.0%            LazyCompile: ~bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      1   50.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1    3.1%        LazyCompile: *bindJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41127:27
+      1  100.0%          LazyCompile: ~bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      1  100.0%            LazyCompile: *bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+     10    8.9%      LazyCompile: *forEachChildRecursively /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27535:37
+      6   60.0%        LazyCompile: *bindParentToChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19069:35
+      6  100.0%          LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      6  100.0%            LazyCompile: ~getModuleInstanceState /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:38962:36
+      3   30.0%        LazyCompile: ~bindJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19060:27
+      3  100.0%          LazyCompile: ~bindParentToChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19069:35
+      3  100.0%            LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      1   10.0%        LazyCompile: *bindJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19060:27
+      1  100.0%          LazyCompile: ~bindParentToChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19069:35
+      1  100.0%            LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      4    3.6%      LazyCompile: *bindEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39601:31
+      3   75.0%        LazyCompile: ~bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      2   66.7%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      2  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1   33.3%          LazyCompile: ~bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      1  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   25.0%        LazyCompile: ~bindAccessExpressionFlow /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40507:42
+      1  100.0%          LazyCompile: ~bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      1  100.0%            LazyCompile: ~bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      3    2.7%      LazyCompile: ~gatherPossibleChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27545:40
+      3  100.0%        LazyCompile: ~forEachChildRecursively /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27535:37
+      2   66.7%          LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103821:54
+      2  100.0%            LazyCompile: ~runWithCancellationToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103718:42
+      1   33.3%          LazyCompile: ~setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      1  100.0%            LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      3    2.7%      LazyCompile: *gatherPossibleChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27545:40
+      3  100.0%        LazyCompile: ~forEachChildRecursively /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27535:37
+      2   66.7%          LazyCompile: *bindParentToChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19069:35
+      2  100.0%            LazyCompile: *setParentRecursive /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:19049:32
+      1   33.3%          LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103821:54
+      1  100.0%            LazyCompile: ~runWithCancellationToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103718:42
+      2    1.8%      LazyCompile: ~getNodeAtPosition /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104158:39
+      2  100.0%        LazyCompile: ~collectDynamicImportOrRequireCalls /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104141:56
+      2  100.0%          LazyCompile: ~collectExternalModuleReferences /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104065:49
+      2  100.0%            LazyCompile: *processImportedModules /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:104655:40
+    112    1.8%    LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+    111   99.1%      LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+    105   94.6%        LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+     67   63.8%          LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+     67  100.0%            LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+     33   31.4%          LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+     33  100.0%            LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      3    2.9%          LazyCompile: *withJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27968:27
+      2   66.7%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32543:38
+      1   33.3%            LazyCompile: ~parseImportEqualsDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33028:46
+      2    1.9%          LazyCompile: ~withJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27968:27
+      1   50.0%            LazyCompile: ~parseVariableStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32504:40
+      1   50.0%            LazyCompile: ~parseInterfaceDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32859:43
+      6    5.4%        LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+      4   66.7%          LazyCompile: ~doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      4  100.0%            LazyCompile: ~parseJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33292:39
+      2   33.3%          LazyCompile: *doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      2  100.0%            LazyCompile: ~parseJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33292:39
+    102    1.6%    LazyCompile: *slice buffer.js:604:12
+     90   88.2%      LazyCompile: *string /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-reader.js:30:11
+     90  100.0%        LazyCompile: *handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+     90  100.0%          LazyCompile: *parse /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:28:10
+     90  100.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/index.js:10:23
+      8    7.8%      LazyCompile: *parseDataRowMessage /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:197:24
+      8  100.0%        LazyCompile: ~handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+      5   62.5%          LazyCompile: *parse /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:28:10
+      5  100.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/index.js:10:23
+      3   37.5%          LazyCompile: ~parse /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:28:10
+      3  100.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/index.js:10:23
+      4    3.9%      LazyCompile: *cstring /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-reader.js:35:12
+      4  100.0%        LazyCompile: *parseField /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:187:15
+      4  100.0%          LazyCompile: ~parseRowDescriptionMessage /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:178:31
+      4  100.0%            LazyCompile: *handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+     74    1.2%    LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+     45   60.8%      LazyCompile: *visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+     31   68.9%        LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+     29   93.5%          LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+     25   86.2%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      4   13.8%            LazyCompile: *bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      2    6.5%          LazyCompile: *bindEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39601:31
+      1   50.0%            LazyCompile: ~bindVariableDeclarationFlow /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40422:45
+      1   50.0%            LazyCompile: ~bindAccessExpressionFlow /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40507:42
+     14   31.1%        LazyCompile: ~forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+     14  100.0%          LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+     12   85.7%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1    7.1%            LazyCompile: ~bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+      1    7.1%            LazyCompile: *bindContainer /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39485:31
+     19   25.7%      LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+     19  100.0%        LazyCompile: *visitNodes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27030:24
+     10   52.6%          LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+     10  100.0%            LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      9   47.4%          LazyCompile: ~forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      8   88.9%            LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      1   11.1%            LazyCompile: *bindEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39601:31
+      8   10.8%      LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      8  100.0%        LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      8  100.0%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      7   87.5%            LazyCompile: *visitNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27027:23
+      1   12.5%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1    1.4%      LazyCompile: ~bindIfStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39986:33
+      1  100.0%        LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      1  100.0%          LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      1  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1    1.4%      LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      1  100.0%        LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1  100.0%          LazyCompile: ~bindEachFunctionsFirst /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39590:40
+      1  100.0%            LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+     71    1.1%    LazyCompile: *declareSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39321:31
+     23   32.4%      LazyCompile: *declareModuleMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39440:37
+     17   73.9%        LazyCompile: *bindBlockScopedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40806:44
+     17  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+     17  100.0%            LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      5   21.7%        LazyCompile: ~bindBlockScopedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40806:44
+      5  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      4   80.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   20.0%            LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      1    4.3%        LazyCompile: *declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      1  100.0%          LazyCompile: ~declareModuleSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40734:37
+      1  100.0%            LazyCompile: ~bindModuleDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40697:39
+     22   31.0%      LazyCompile: *bindPropertyWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41387:36
+     22  100.0%        LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+     22  100.0%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+     22  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+     13   18.3%      LazyCompile: *bindParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41893:31
+     12   92.3%        LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+     12  100.0%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+     12  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      1    7.7%        LazyCompile: ~bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1  100.0%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+      5    7.0%      LazyCompile: *declareClassMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40673:36
+      2   40.0%        LazyCompile: *bindPropertyWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41387:36
+      2  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      2  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      2   40.0%        LazyCompile: *bindPropertyOrMethodOrAccessor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41943:48
+      2  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      2  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   20.0%        LazyCompile: *declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      1  100.0%          LazyCompile: ~bindPropertyOrMethodOrAccessor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41943:48
+      1  100.0%            LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      4    5.6%      LazyCompile: *declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      2   50.0%        LazyCompile: ~bindParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41893:31
+      2  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      2  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   25.0%        LazyCompile: ~bindTypeParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41958:35
+      1  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   25.0%        LazyCompile: ~bindPropertyOrMethodOrAccessor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41943:48
+      1  100.0%          LazyCompile: ~bindPropertyWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41387:36
+      1  100.0%            LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      2    2.8%      LazyCompile: ~declareModuleMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39440:37
+      1   50.0%        LazyCompile: ~bindBlockScopedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40806:44
+      1  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1   50.0%        LazyCompile: *bindBlockScopedDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40806:44
+      1  100.0%          LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1  100.0%            LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39592:38
+      1    1.4%      LazyCompile: ~declareSourceFileMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40678:41
+      1  100.0%        LazyCompile: *declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      1  100.0%          LazyCompile: ~bindVariableDeclarationOrBindingElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41868:57
+      1  100.0%            LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1    1.4%      LazyCompile: *bindPropertyOrMethodOrAccessor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41943:48
+      1  100.0%        LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1  100.0%          LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1  100.0%            LazyCompile: *bindEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39594:26
+     63    1.0%    LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+     60   95.2%      LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+     41   68.3%        LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+     41  100.0%          LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+     39   95.1%            LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      2    4.9%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+     19   31.7%        LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+     19  100.0%          LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+     19  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      3    4.8%      LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+      3  100.0%        LazyCompile: ~doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      3  100.0%          LazyCompile: ~parseJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33292:39
+      3  100.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27974:92
+
+   1424   14.8%  epoll_pwait
+
+    268    2.8%  LazyCompile: *scanJsDocToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10665:32
+    258   96.3%    LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+    255   98.8%      LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+    250   98.0%        LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+    168   67.2%          LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+    168  100.0%            LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+     75   30.0%          LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+     75  100.0%            LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      4    1.6%          LazyCompile: *parseTypeAliasDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32868:43
+      4  100.0%            LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      3    1.2%          LazyCompile: ~withJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27968:27
+      2   66.7%            LazyCompile: ~parseInterfaceDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32859:43
+      1   33.3%            LazyCompile: ~parseImportEqualsDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33028:46
+      5    2.0%        LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+      3   60.0%          LazyCompile: *doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      3  100.0%            LazyCompile: ~parseJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33292:39
+      2   40.0%          LazyCompile: ~doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      2  100.0%            LazyCompile: ~parseJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33292:39
+      3    1.2%      LazyCompile: ~scanRange /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10767:27
+      3  100.0%        LazyCompile: ~parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+      3  100.0%          LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+      3  100.0%            LazyCompile: ~doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      3    1.1%    LazyCompile: *parseTagComments /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33559:42
+      3  100.0%      LazyCompile: ~parseParameterOrPropertyTag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33703:53
+      3  100.0%        LazyCompile: ~parseTag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33482:34
+      3  100.0%          LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+      2   66.7%            LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+      1   33.3%            LazyCompile: ~scanRange /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10767:27
+      3    1.1%    LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+      3  100.0%      LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+      3  100.0%        LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      3  100.0%          LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      3  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      3    1.1%    LazyCompile: *nextTokenJSDoc /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28254:32
+      2   66.7%      LazyCompile: ~isNextNonwhitespaceTokenEndOfFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33437:59
+      1   50.0%        LazyCompile: *skipWhitespaceOrAsterisk /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33459:50
+      1  100.0%          LazyCompile: ~parseTag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33482:34
+      1  100.0%            LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+      1   50.0%        LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28314:27
+      1  100.0%          LazyCompile: ~skipWhitespace /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33449:40
+      1  100.0%            LazyCompile: ~parseParameterOrPropertyTag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33703:53
+      1   33.3%      LazyCompile: ~parseTag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33482:34
+      1  100.0%        LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+      1  100.0%          LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+      1  100.0%            LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+
+    268    2.8%  LazyCompile: *scan /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:9974:22
+     57   21.3%    LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+     57  100.0%      LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+     53   93.0%        LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+     53  100.0%          LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+     53  100.0%            LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      4    7.0%        LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      3   75.0%          LazyCompile: *parseObjectTypeMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29809:40
+      3  100.0%            LazyCompile: ~parseInterfaceDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32859:43
+      1   25.0%          LazyCompile: ~parseObjectTypeMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29809:40
+      1  100.0%            LazyCompile: ~parseInterfaceDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32859:43
+     49   18.3%    LazyCompile: *nextToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28246:27
+      9   18.4%      LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      9  100.0%        LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      9  100.0%          LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      5   55.6%            LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      4   44.4%            LazyCompile: *parseType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30264:27
+      8   16.3%      LazyCompile: ~parseSemicolon /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28420:32
+      4   50.0%        LazyCompile: ~parseFunctionBlockOrSemicolon /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32384:47
+      3   75.0%          LazyCompile: ~parseFunctionDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32512:42
+      2   66.7%            LazyCompile: ~parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      1   33.3%            LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1   25.0%          LazyCompile: ~parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      1  100.0%            LazyCompile: ~parsePropertyOrMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32577:50
+      3   37.5%        LazyCompile: ~parseTypeMemberSemicolon /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29634:42
+      3  100.0%          LazyCompile: ~parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      2   66.7%            LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1   33.3%            LazyCompile: ~parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1   12.5%        LazyCompile: ~parsePropertyDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32569:42
+      1  100.0%          LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      1  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      7   14.3%      LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      7  100.0%        LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      7  100.0%          LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      7  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      6   12.2%      LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28314:27
+      6  100.0%        LazyCompile: *isDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32081:31
+      4   66.7%          LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      4  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      2   33.3%          LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10788:27
+      2  100.0%            LazyCompile: *isStartOfStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32160:36
+      4    8.2%      LazyCompile: ~parseExpected /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28348:31
+      2   50.0%        LazyCompile: ~parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      2  100.0%          LazyCompile: ~parseFunctionDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32512:42
+      2  100.0%            LazyCompile: ~parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      2   50.0%        LazyCompile: ~parseObjectTypeMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29809:40
+      2  100.0%          LazyCompile: ~parseInterfaceDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32859:43
+      2  100.0%            LazyCompile: ~parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      3    6.1%      LazyCompile: ~nextTokenCanFollowModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28567:44
+      3  100.0%        LazyCompile: *speculationHelper /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28281:35
+      3  100.0%          LazyCompile: ~tryParse /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28322:26
+      3  100.0%            LazyCompile: *parseModifiers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32714:32
+      3    6.1%      LazyCompile: *parseTypeAliasDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32868:43
+      3  100.0%        LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      3  100.0%          LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      3  100.0%            LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      2    4.1%      LazyCompile: ~parseVariableDeclarationList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32464:46
+      2  100.0%        LazyCompile: ~parseVariableStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32504:40
+      2  100.0%          LazyCompile: ~parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      2  100.0%            LazyCompile: ~parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      2    4.1%      LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1   50.0%        LazyCompile: *parseTypeAnnotation /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30286:37
+      1  100.0%          LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      1  100.0%            LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1   50.0%        LazyCompile: *parseParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29541:32
+      1  100.0%          LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1  100.0%            LazyCompile: *parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      2    4.1%      LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      1   50.0%        LazyCompile: ~parseParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29541:32
+      1  100.0%          LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1  100.0%            LazyCompile: *parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      1   50.0%        LazyCompile: *parseParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29541:32
+      1  100.0%          LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1  100.0%            LazyCompile: *parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      1    2.0%      LazyCompile: ~nextTokenIsOnSameLineAndCanFollowModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28560:59
+      1  100.0%        LazyCompile: ~nextTokenCanFollowModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28567:44
+      1  100.0%          LazyCompile: *speculationHelper /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28281:35
+      1  100.0%            LazyCompile: ~tryParse /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28322:26
+      1    2.0%      LazyCompile: ~nextTokenCanFollowExportModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28598:50
+      1  100.0%        LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28314:27
+      1  100.0%          LazyCompile: *nextTokenCanFollowModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28567:44
+      1  100.0%            LazyCompile: *tryParse /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28322:26
+      1    2.0%      LazyCompile: *isDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32081:31
+      1  100.0%        LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28314:27
+      1  100.0%          LazyCompile: ~isStartOfDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32157:38
+      1  100.0%            LazyCompile: *isStartOfStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32160:36
+     29   10.8%    LazyCompile: *parseExpected /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28348:31
+     22   75.9%      LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+     22  100.0%        LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+     22  100.0%          LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+     19   86.4%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      3   13.6%            LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      2    6.9%      LazyCompile: *parseObjectLiteralElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31681:43
+      2  100.0%        LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      2  100.0%          LazyCompile: *parseObjectLiteralExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31732:46
+      1   50.0%            LazyCompile: ~parseJsonText /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27814:31
+      1   50.0%            LazyCompile: *parsePrimaryExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31607:40
+      1    3.4%      LazyCompile: ~parseMappedType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29837:33
+      1  100.0%        LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1  100.0%          LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      1  100.0%            LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1    3.4%      LazyCompile: ~parseClassDeclarationOrExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32789:51
+      1  100.0%        LazyCompile: ~parseClassDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32786:39
+      1  100.0%          LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1    3.4%      LazyCompile: ~parseBracketedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29211:36
+      1  100.0%        LazyCompile: ~parseTypeArgumentsOfTypeReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29347:51
+      1  100.0%          LazyCompile: ~parseTypeReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29352:36
+      1  100.0%            LazyCompile: ~parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1    3.4%      LazyCompile: ~parseBlock /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31810:28
+      1  100.0%        LazyCompile: ~parseFunctionBlock /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31829:36
+      1  100.0%          LazyCompile: ~parseFunctionExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31746:41
+      1  100.0%            LazyCompile: *parsePrimaryExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31607:40
+      1    3.4%      LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      1  100.0%        LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1  100.0%          LazyCompile: *parseTypeAliasDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32868:43
+      1  100.0%            LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+     29   10.8%    LazyCompile: *isDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32081:31
+     16   55.2%      LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+     15   93.8%        LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+     15  100.0%          LazyCompile: ~parseModuleBlock /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32903:34
+     15  100.0%            LazyCompile: ~parseModuleOrNamespaceDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32915:51
+      1    6.3%        LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      1  100.0%          LazyCompile: ~parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: ~parseModuleBlock /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32903:34
+     12   41.4%      LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10788:27
+     12  100.0%        LazyCompile: *isStartOfStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32160:36
+     12  100.0%          LazyCompile: *isListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28620:31
+     11   91.7%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1    8.3%            LazyCompile: ~parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1    3.4%      LazyCompile: *speculationHelper /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:10747:35
+      1  100.0%        LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1  100.0%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: ~parseSourceFileWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27937:39
+     28   10.4%    LazyCompile: *parseSemicolon /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28420:32
+     28  100.0%      LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+     28  100.0%        LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+     28  100.0%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+     28  100.0%            LazyCompile: ~parseClassMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32856:35
+     18    6.7%    LazyCompile: *parseTypeAnnotation /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30286:37
+     17   94.4%      LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+     17  100.0%        LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+     16   94.1%          LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+     15   93.8%            LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      1    6.3%            LazyCompile: ~parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1    5.9%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: *parseObjectTypeMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29809:40
+      1    5.6%      LazyCompile: *parseParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29541:32
+      1  100.0%        LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1  100.0%          LazyCompile: *parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      1  100.0%            LazyCompile: ~parseFunctionOrConstructorType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29910:48
+     14    5.2%    LazyCompile: *createIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28477:34
+      5   35.7%      LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      5  100.0%        LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      5  100.0%          LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      2   40.0%            LazyCompile: *parseType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30264:27
+      2   40.0%            LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      1   20.0%            LazyCompile: *parseTypeAnnotation /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30286:37
+      2   14.3%      LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      2  100.0%        LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      2  100.0%          LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      2  100.0%            LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      2   14.3%      LazyCompile: *parseIdentifierOrPattern /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32439:42
+      2  100.0%        LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      2  100.0%          LazyCompile: *parseParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29541:32
+      2  100.0%            LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1    7.1%      LazyCompile: ~parseIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28503:33
+      1  100.0%        LazyCompile: ~parseTypeParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29480:36
+      1  100.0%          LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1  100.0%            LazyCompile: ~parseBracketedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29211:36
+      1    7.1%      LazyCompile: *parseTypeOrTypePredicate /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30239:42
+      1  100.0%        LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      1  100.0%          LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      1  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1    7.1%      LazyCompile: *parseTypeAliasDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32868:43
+      1  100.0%        LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      1  100.0%          LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      1  100.0%            LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1    7.1%      LazyCompile: *parseRightSideOfDot /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29237:37
+      1  100.0%        LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1  100.0%          LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      1  100.0%            LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1    7.1%      LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      1  100.0%        LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      1  100.0%          LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+     11    4.1%    LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      5   45.5%      LazyCompile: *parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      3   60.0%        LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      3  100.0%          LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      2   66.7%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1   33.3%            LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      1   20.0%        LazyCompile: ~parseFunctionOrConstructorType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29910:48
+      1  100.0%          LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1  100.0%            LazyCompile: *parseType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30264:27
+      1   20.0%        LazyCompile: *parseFunctionOrConstructorType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29910:48
+      1  100.0%          LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1  100.0%            LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      3   27.3%      LazyCompile: *parseObjectLiteralExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31732:46
+      2   66.7%        LazyCompile: *parsePrimaryExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31607:40
+      2  100.0%          LazyCompile: *parseLeftHandSideExpressionOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31046:53
+      2  100.0%            LazyCompile: *parseUpdateExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31028:39
+      1   33.3%        LazyCompile: ~parseJsonText /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27814:31
+      1  100.0%          LazyCompile: ~parseJsonText /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27615:27
+      1  100.0%            LazyCompile: ~parseConfigFileTextToJson /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:36253:39
+      2   18.2%      LazyCompile: ~parseArrayLiteralExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31673:45
+      2  100.0%        LazyCompile: *parsePrimaryExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31607:40
+      2  100.0%          LazyCompile: *parseLeftHandSideExpressionOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31046:53
+      2  100.0%            LazyCompile: *parseUpdateExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31028:39
+      1    9.1%      LazyCompile: *parseBracketedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29211:36
+      1  100.0%        LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1  100.0%          LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      1  100.0%            LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      6    2.2%    LazyCompile: *nextTokenCanFollowModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28567:44
+      5   83.3%      LazyCompile: *tryParse /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28322:26
+      3   60.0%        LazyCompile: *parseModifiers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32714:32
+      3  100.0%          LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      3  100.0%            LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      2   40.0%        LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      2  100.0%          LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      2  100.0%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1   16.7%      LazyCompile: *speculationHelper /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28281:35
+      1  100.0%        LazyCompile: ~tryParse /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28322:26
+      1  100.0%          LazyCompile: *parseModifiers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32714:32
+      1  100.0%            LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      5    1.9%    LazyCompile: *parseOptional /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28373:31
+      2   40.0%      LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      1   50.0%        LazyCompile: ~parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1  100.0%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: ~parseObjectTypeMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29809:40
+      1   50.0%        LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1  100.0%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: ~parseObjectTypeMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29809:40
+      1   20.0%      LazyCompile: ~shouldParseReturnType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29572:39
+      1  100.0%        LazyCompile: ~parseReturnType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29567:33
+      1  100.0%          LazyCompile: ~parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      1  100.0%            LazyCompile: ~parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1   20.0%      LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1  100.0%        LazyCompile: *parseIntersectionTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30179:47
+      1  100.0%          LazyCompile: *parseUnionTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30182:40
+      1  100.0%            LazyCompile: ~parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1   20.0%      LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      1  100.0%        LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      1  100.0%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: ~parseClassMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32856:35
+      4    1.5%    LazyCompile: *parseParameters /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29613:33
+      1   25.0%      LazyCompile: ~parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      1  100.0%        LazyCompile: ~parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1  100.0%          LazyCompile: ~parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      1  100.0%            LazyCompile: ~parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1   25.0%      LazyCompile: ~parseFunctionOrConstructorType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29910:48
+      1  100.0%        LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1  100.0%          LazyCompile: *parseTypeOrTypePredicate /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30239:42
+      1  100.0%            LazyCompile: ~parseReturnType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29567:33
+      1   25.0%      LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      1  100.0%        LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+      1  100.0%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: *parseObjectTypeMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29809:40
+      1   25.0%      LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      1  100.0%        LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+      1  100.0%          LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1  100.0%            LazyCompile: ~parseClassMembers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32856:35
+      3    1.1%    LazyCompile: *parseFunctionOrConstructorType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29910:48
+      3  100.0%      LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      3  100.0%        LazyCompile: *parseParameterWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29544:38
+      3  100.0%          LazyCompile: *parseParameter /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29541:32
+      3  100.0%            LazyCompile: *parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      3    1.1%    LazyCompile: *nextTokenCanFollowExportModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28598:50
+      3  100.0%      LazyCompile: *lookAhead /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28314:27
+      3  100.0%        LazyCompile: *nextTokenCanFollowModifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28567:44
+      3  100.0%          LazyCompile: *tryParse /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28322:26
+      2   66.7%            LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      1   33.3%            LazyCompile: *parseModifiers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32714:32
+
+    117    1.2%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     54   46.2%    /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      7   13.0%      LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+      7  100.0%        LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+      6   85.7%          LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+      3   50.0%            LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+      3   50.0%            LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+      1   14.3%          LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+      1  100.0%            LazyCompile: ~doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      4    7.4%      /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1   25.0%        LazyCompile: ~replaceTilde /home/vladhmara/Repos/Pichupido/node_modules/semver/semver.js:989:23
+      1  100.0%          LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/semver/semver.js:984:48
+      1  100.0%            /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1   25.0%        LazyCompile: ~module.exports /home/vladhmara/Repos/Pichupido/node_modules/humanize-number/index.js:2:26
+      1  100.0%          LazyCompile: ~time /home/vladhmara/Repos/Pichupido/node_modules/koa-logger/index.js:152:15
+      1  100.0%            LazyCompile: ~log /home/vladhmara/Repos/Pichupido/node_modules/koa-logger/index.js:108:14
+      1   25.0%        LazyCompile: ~FastBuffer internal/buffer.js:949:1
+      1  100.0%          LazyCompile: ~alloc buffer.js:368:30
+      1  100.0%            LazyCompile: ~ensure /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-writer.js:11:11
+      1   25.0%        LazyCompile: *FastBuffer internal/buffer.js:949:1
+      1  100.0%          LazyCompile: ~createUnsafeBuffer buffer.js:145:28
+      1  100.0%            LazyCompile: ~allocate buffer.js:406:18
+      2    3.7%      LazyCompile: *parseTagComments /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33559:42
+      2  100.0%        LazyCompile: ~parseParameterOrPropertyTag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33703:53
+      2  100.0%          LazyCompile: ~parseTag /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33482:34
+      2  100.0%            LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+      2    3.7%      LazyCompile: *declareSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39321:31
+      1   50.0%        LazyCompile: ~declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      1  100.0%          LazyCompile: ~bindPropertyOrMethodOrAccessor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41943:48
+      1  100.0%            LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1   50.0%        LazyCompile: *declareSymbolAndAddToSymbolTable /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:40619:50
+      1  100.0%          LazyCompile: ~bindPropertyOrMethodOrAccessor /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41943:48
+      1  100.0%            LazyCompile: ~bindPropertyWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41387:36
+      1    1.9%      LazyCompile: ~updateOutput /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:631:22
+      1  100.0%        LazyCompile: ~compile /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:488:21
+      1  100.0%          LazyCompile: ~m._compile /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:554:31
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1084:37
+      1    1.9%      LazyCompile: ~string /home/vladhmara/Repos/Pichupido/node_modules/o2team-joi-to-swagger/index.js:154:10
+      1  100.0%        LazyCompile: ~parse /home/vladhmara/Repos/Pichupido/node_modules/o2team-joi-to-swagger/index.js:36:43
+      1  100.0%          LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/o2team-joi-to-swagger/index.js:321:20
+      1  100.0%            /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1    1.9%      LazyCompile: ~statSync fs.js:1037:18
+      1  100.0%        LazyCompile: ~fileSystemEntryExists /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6370:43
+      1  100.0%          LazyCompile: ~fileExists /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:6390:32
+      1  100.0%            LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:136:12
+      1    1.9%      LazyCompile: ~setHeader _http_outgoing.js:541:57
+      1  100.0%        LazyCompile: ~referrerPolicyMiddleware /home/vladhmara/Repos/Pichupido/node_modules/helmet/dist/middlewares/referrer-policy/index.js:33:45
+      1  100.0%          LazyCompile: ~internalNext /home/vladhmara/Repos/Pichupido/node_modules/helmet/dist/index.js:93:31
+      1  100.0%            LazyCompile: ~xPermittedCrossDomainPoliciesMiddleware /home/vladhmara/Repos/Pichupido/node_modules/helmet/dist/middlewares/x-permitted-cross-domain-policies/index.js:19:60
+      1    1.9%      LazyCompile: ~pushIfUnique /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:1211:26
+      1  100.0%        LazyCompile: ~appendIfUnique /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:1224:28
+      1  100.0%          LazyCompile: ~addDeclarationToSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39217:40
+      1  100.0%            LazyCompile: ~declareSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39321:31
+      1    1.9%      LazyCompile: ~parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1  100.0%        LazyCompile: ~parseIfStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:31856:34
+      1  100.0%          LazyCompile: ~parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1  100.0%            LazyCompile: ~parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      1    1.9%      LazyCompile: ~optionalChainContainsReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60874:48
+      1  100.0%        LazyCompile: ~narrowTypeByBinaryExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:62084:50
+      1  100.0%          LazyCompile: *getTypeAtFlowNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61631:39
+      1  100.0%            LazyCompile: ~getTypeAtFlowBranchLabel /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61890:46
+      1    1.9%      LazyCompile: ~onFinish /home/vladhmara/Repos/Pichupido/node_modules/on-finished/index.js:95:20
+      1  100.0%        LazyCompile: ~callback /home/vladhmara/Repos/Pichupido/node_modules/ee-first/index.js:53:20
+      1  100.0%          LazyCompile: ~onevent /home/vladhmara/Repos/Pichupido/node_modules/ee-first/index.js:81:26
+      1  100.0%            LazyCompile: ~emit events.js:262:44
+      1    1.9%      LazyCompile: ~module.exports /home/vladhmara/Repos/Pichupido/node_modules/cache-content-type/index.js:8:18
+      1  100.0%        LazyCompile: ~set type /home/vladhmara/Repos/Pichupido/node_modules/koa/lib/response.js:308:11
+      1  100.0%          /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1  100.0%            LazyCompile: ~set body /home/vladhmara/Repos/Pichupido/node_modules/koa/lib/response.js:134:11
+      1    1.9%      LazyCompile: ~isMatchingReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60826:37
+      1  100.0%        LazyCompile: ~getTypeAtFlowAssignment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61731:45
+      1  100.0%          LazyCompile: ~getTypeAtFlowNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61631:39
+      1  100.0%            LazyCompile: ~getTypeAtFlowCondition /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61844:44
+      1    1.9%      LazyCompile: ~isIdentifierOrPrivateIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:11724:45
+      1  100.0%        LazyCompile: ~getEscapedTextOfIdentifierOrLiteral /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:15659:49
+      1  100.0%          LazyCompile: ~getDeclarationName /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39237:36
+      1  100.0%            LazyCompile: ~declareSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39321:31
+      1    1.9%      LazyCompile: ~info /home/vladhmara/Repos/Pichupido/node_modules/pino/lib/levels.js:39:9
+      1  100.0%        LazyCompile: ~setLevel /home/vladhmara/Repos/Pichupido/node_modules/pino/lib/levels.js:84:19
+      1  100.0%          LazyCompile: ~pino /home/vladhmara/Repos/Pichupido/node_modules/pino/pino.js:76:15
+      1  100.0%            Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/build/src/middlewares/errorCatcher.js:1:1
+      1    1.9%      LazyCompile: ~inferFromObjectTypesWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60487:48
+      1  100.0%        LazyCompile: ~inferFromObjectTypes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60454:42
+      1  100.0%          LazyCompile: ~invokeOnce /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60248:32
+      1  100.0%            LazyCompile: ~inferFromTypes /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60032:36
+      1    1.9%      LazyCompile: ~helmet /home/vladhmara/Repos/Pichupido/node_modules/helmet/dist/index.js:16:16
+      1  100.0%        LazyCompile: ~koaHelmet /home/vladhmara/Repos/Pichupido/node_modules/koa-helmet/lib/koa-helmet.js:6:28
+      1  100.0%          LazyCompile: ~start /home/vladhmara/Repos/Pichupido/build/src/app.js:26:21
+      1  100.0%            Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/build/src/server.js:1:1
+      1    1.9%      LazyCompile: ~getTypeChecker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:103620:32
+      1  100.0%        LazyCompile: ~synchronizeHostData /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:143831:37
+      1  100.0%          LazyCompile: ~getProgram /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:143995:28
+      1  100.0%            LazyCompile: ~getOutput /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:335:25
+      1    1.9%      LazyCompile: ~getTypeAtFlowAssignment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61731:45
+      1  100.0%        LazyCompile: *getTypeAtFlowNode /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61631:39
+      1  100.0%          LazyCompile: *getFlowTypeOfReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61600:40
+      1  100.0%            LazyCompile: ~checkIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:62659:33
+      1    1.9%      LazyCompile: ~getSelectClause /home/vladhmara/Repos/Pichupido/build/src/libs/db/typeMapping.js:5:25
+      1  100.0%        LazyCompile: ~exports.getSectionByRestaurant /home/vladhmara/Repos/Pichupido/build/src/sections/sections.queries.js:28:34
+      1  100.0%          LazyCompile: ~exports.getSectionByRestaurant /home/vladhmara/Repos/Pichupido/build/src/sections/sections.service.js:44:34
+      1  100.0%            LazyCompile: ~exports.getSectionByRestaurant /home/vladhmara/Repos/Pichupido/build/src/sections/sections.controllers.js:38:34
+      1    1.9%      LazyCompile: ~getReturnTypeOfSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:52749:42
+      1  100.0%        LazyCompile: ~signatureToSignatureDeclarationHelper /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:46855:59
+      1  100.0%          LazyCompile: ~createTypeNodeFromObjectType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:46474:54
+      1  100.0%            LazyCompile: ~visitAndTransformType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:46444:47
+      1    1.9%      LazyCompile: ~getAssignmentDeclarationKindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:14791:48
+      1  100.0%        LazyCompile: ~getAssignmentDeclarationKind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:14740:42
+      1  100.0%          LazyCompile: ~bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1  100.0%            LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1    1.9%      LazyCompile: ~get length /home/vladhmara/Repos/Pichupido/node_modules/koa/lib/response.js:204:13
+      1  100.0%        LazyCompile: ~logger /home/vladhmara/Repos/Pichupido/node_modules/koa-logger/index.js:57:32
+      1  100.0%          /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1  100.0%            /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1    1.9%      LazyCompile: ~forEachCode /home/vladhmara/Repos/Pichupido/node_modules/http-errors/index.js:265:38
+      1  100.0%        /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1  100.0%          LazyCompile: ~populateConstructorExports /home/vladhmara/Repos/Pichupido/node_modules/http-errors/index.js:264:37
+      1  100.0%            Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/http-errors/index.js:1:1
+      1    1.9%      LazyCompile: ~firstDefined /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:407:26
+      1  100.0%        LazyCompile: ~primaryLookup /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:37943:31
+      1  100.0%          LazyCompile: ~resolveTypeReferenceDirective /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:37893:43
+      1  100.0%            LazyCompile: ~loader_2 /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:102899:37
+      1    1.9%      LazyCompile: ~fillMissingTypeArguments /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:52520:42
+      1  100.0%        LazyCompile: ~getTypeAliasInstantiation /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:53142:43
+      1  100.0%          LazyCompile: ~getTypeFromTypeAliasReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:53158:47
+      1  100.0%            LazyCompile: ~getTypeReferenceType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:53195:38
+      1    1.9%      LazyCompile: ~addRoute /home/vladhmara/Repos/Pichupido/node_modules/koa-joi-router/joi-router.js:111:47
+      1  100.0%        LazyCompile: ~route /home/vladhmara/Repos/Pichupido/node_modules/koa-joi-router/joi-router.js:91:40
+      1  100.0%          LazyCompile: ~Router.<computed> /home/vladhmara/Repos/Pichupido/node_modules/koa-joi-router/joi-router.js:538:38
+      1  100.0%            Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/build/src/accounts/accounts.routers.js:1:1
+      1    1.9%      LazyCompile: ~Readable _stream_readable.js:182:18
+      1  100.0%        LazyCompile: ~Duplex _stream_duplex.js:52:16
+      1  100.0%          LazyCompile: ~Socket net.js:267:16
+      1  100.0%            LazyCompile: ~onconnection net.js:1531:22
+      1    1.9%      LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      1  100.0%        LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:808:35
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:721:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:956:36
+      1    1.9%      LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:65831:53
+      1  100.0%        LazyCompile: *forEach /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:379:21
+      1  100.0%          LazyCompile: ~resolveUntypedCall /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:65818:36
+      1  100.0%            LazyCompile: ~resolveCallExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:66943:39
+      1    1.9%      LazyCompile: *nextToken /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28246:27
+      1  100.0%        LazyCompile: ~parseOptional /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28373:31
+      1  100.0%          LazyCompile: ~parseDelimitedList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29145:36
+      1  100.0%            LazyCompile: ~parseParametersWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29588:39
+      1    1.9%      LazyCompile: *isJSDocTypeExpression /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:26150:35
+      1  100.0%        LazyCompile: *getSourceTextOfNodeFromSourceFile /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:13179:47
+      1  100.0%          LazyCompile: *_loop_4 /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:36409:36
+      1  100.0%            LazyCompile: *convertPropertyValueToJson /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:36473:44
+      1    1.9%      LazyCompile: *getNodeLinks /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:43503:30
+      1  100.0%        LazyCompile: ~getResolvedSymbol /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60785:35
+      1  100.0%          LazyCompile: ~isMatchingReference /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:60826:37
+      1  100.0%            LazyCompile: *getTypeAtFlowAssignment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:61731:45
+      1    1.9%      LazyCompile: *createNodeArray /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28432:33
+      1  100.0%        LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1  100.0%          LazyCompile: *parseTypeAliasDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32868:43
+      1  100.0%            LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      1    1.9%      LazyCompile: *createNodeArray /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:20085:33
+      1  100.0%        LazyCompile: *parseDeclarationWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32334:40
+      1  100.0%          LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      1  100.0%            LazyCompile: *parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1    1.9%      LazyCompile: *createIdentifier /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28477:34
+      1  100.0%        LazyCompile: *parseNonArrayType /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29959:35
+      1  100.0%          LazyCompile: *parsePostfixTypeOrHigher /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30079:42
+      1  100.0%            LazyCompile: *parseTypeWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:30269:33
+      1    1.9%      LazyCompile: *bindWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41165:28
+      1  100.0%        LazyCompile: *bind /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:41075:22
+      1  100.0%          LazyCompile: *forEachChild /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27064:26
+      1  100.0%            LazyCompile: *bindChildren /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:39604:30
+      1    1.9%      LazyCompile: *append /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:1165:20
+      1  100.0%        LazyCompile: *parseModifiers /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32714:32
+      1  100.0%          LazyCompile: *parseDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32297:34
+      1  100.0%            LazyCompile: ~parseStatement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32223:32
+      1    1.9%      Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:146519:11
+      1  100.0%        Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1029:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1084:37
+      1    1.9%      Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/build/src/restaurants/restaurants.conrollers.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1029:37
+      1  100.0%          LazyCompile: ~m._compile /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:554:31
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1084:37
+      1    1.9%      Eval: ~<anonymous> /home/vladhmara/Repos/Pichupido/build/src/menu/menu.service.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1029:37
+      1  100.0%          LazyCompile: ~m._compile /home/vladhmara/Repos/Pichupido/node_modules/ts-node/dist/index.js:554:31
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1084:37
+      3    2.6%    LazyCompile: *writeOrBuffer _stream_writable.js:334:23
+      2   66.7%      LazyCompile: *Writable.write _stream_writable.js:258:36
+      2  100.0%        LazyCompile: ~value internal/console/constructor.js:241:20
+      2  100.0%          LazyCompile: ~log internal/console/constructor.js:340:6
+      2  100.0%            /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      1   33.3%      LazyCompile: ~Writable.write _stream_writable.js:258:36
+      1  100.0%        LazyCompile: ~value internal/console/constructor.js:241:20
+      1  100.0%          LazyCompile: ~log internal/console/constructor.js:340:6
+      1  100.0%            /home/vladhmara/.nvm/versions/node/v14.9.0/bin/node
+      2    1.7%    LazyCompile: *slice buffer.js:604:12
+      1   50.0%      LazyCompile: *string /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-reader.js:30:11
+      1  100.0%        LazyCompile: *handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+      1  100.0%          LazyCompile: *parse /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:28:10
+      1  100.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/index.js:10:23
+      1   50.0%      LazyCompile: *cstring /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/buffer-reader.js:35:12
+      1  100.0%        LazyCompile: *parseField /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:187:15
+      1  100.0%          LazyCompile: ~parseRowDescriptionMessage /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:178:31
+      1  100.0%            LazyCompile: *handlePacket /home/vladhmara/Repos/Pichupido/node_modules/pg-protocol/dist/parser.js:93:17
+
+    116    1.2%  LazyCompile: *<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33340:74
+    116  100.0%    LazyCompile: *parseJSDocCommentWorker /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33323:45
+    110   94.8%      LazyCompile: *addJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27972:33
+     77   70.0%        LazyCompile: *parsePropertyOrMethodSignature /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29718:48
+     77  100.0%          LazyCompile: *parseTypeMember /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:29774:33
+     76   98.7%            LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      1    1.3%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+     31   28.2%        LazyCompile: *parseMethodDeclaration /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32557:40
+     31  100.0%          LazyCompile: *parseClassElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:32732:35
+     30   96.8%            LazyCompile: *parseList /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28837:27
+      1    3.2%            LazyCompile: *parseListElement /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28855:34
+      6    5.2%      LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33296:79
+      3   50.0%        LazyCompile: ~doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      3  100.0%          LazyCompile: ~parseJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33292:39
+      3  100.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27974:92
+      3   50.0%        LazyCompile: *doInsideOfContext /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:28144:35
+      3  100.0%          LazyCompile: ~parseJSDocComment /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:33292:39
+      3  100.0%            LazyCompile: ~<anonymous> /home/vladhmara/Repos/Pichupido/node_modules/typescript/lib/typescript.js:27974:92
+
