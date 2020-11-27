@@ -22,10 +22,10 @@ SELECT *
 
 We added indexes and optimized query a little.
 Before:
-![Dishes before](/explain/Dish_select_basic.png)
+![Dishes before](./explain/Dish_select_basic.png)
 
 After:
-![Dishes after](/explain/Dish_select_index.png)
+![Dishes after](./explain/Dish_select_index.png)
 
 Other tables in database have too small amount of data, so query planner chooses full scan over using an index, because full scan is more effective.
 
@@ -34,7 +34,9 @@ SELECT * FROM Menu WHERE restaurant_id = 4;
 ```
 
 Without index:
-![Menus no index](/explain/Select_menu_basic.png)
+
+![Menus no index](./explain/Select_menu_basic.png)
 
 With index:
-![Menus with index](/explain/Select_menu_index.png)
+
+![Menus with index](./explain/Select_menu_index.png)
