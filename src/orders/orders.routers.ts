@@ -14,6 +14,11 @@ ordersRouter.post(
   OrdersValidator.confirmOrder,
   OrdersController.confirmOrder,
 );
+ordersRouter.post(
+  '/delay',
+  OrdersValidator.delay,
+  OrdersController.delay,
+);
 
 
 export default ordersRouter;

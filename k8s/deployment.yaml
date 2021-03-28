@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  replicas: 1                      # кількість екземплярів Pod, що буде створено цим Deployment
+  selector:
+    matchLabels:
+      app: api                # селектор по якому Deployment зв'язаний з Pod
+  template:
+    metadata:
+      labels:
+        app: api              # мітка Pod по якому вона буде зв'язана з Deployment та Service
+    spec:
+      containers:
+        - image: siusarna/api:latest       # образ Docker
+          name: api          # ім'я контейнеру
+          ports:
+            - containerPort: 3001

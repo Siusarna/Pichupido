@@ -73,3 +73,24 @@ export const confirmOrder: Router.Config = {
   },
 };
 
+export const delay: Router.Config = {
+  meta: {
+    swagger: {
+      summary: 'Confirm that payment is ok',
+      description: 'Confirm that payment is ok',
+      tags: ['orders'],
+    },
+  },
+  validate: {
+    type: 'json',
+    body: {
+      email: joi.string(),
+      phone: joi.string(),
+    },
+    output: {
+      204: {
+        body: {},
+      },
+    },
+  },
+};
