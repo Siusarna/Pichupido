@@ -9,6 +9,8 @@ const s3conf: {
 
 const s3 = new AWS.S3({
   region: 'eu-north-1',
+  accessKeyId: 'AKIA43CQWWEMDDZPLANY',
+  secretAccessKey: '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'
 });
 
 export const deleteImage = async (url: string): Promise<void> => {

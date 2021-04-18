@@ -23,8 +23,13 @@ export const createOrder = async (order: Order): Promise<{ clientSecret: string 
     amount: order.paid * 100,
     currency: 'uah',
   };
+  let paymentIntent;
+  try {
+    paymentIntent = await pay(configForPaymentIntent);
+  } catch (e) {
+    throw new Error('Payment timeout');
+  }
 
-  const paymentIntent = await pay(configForPaymentIntent);
   const savedOrder = await queries.insertOrder({
     stripePaymentIntentId: paymentIntent.id,
     ...order,

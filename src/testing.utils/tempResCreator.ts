@@ -13,7 +13,7 @@ export class TemporaryResourseCreator {
 
   signIn = async (): Promise<string[]> => {
     const user = uuidv4();
-    const password = 'qwerty12345!'
+    const password = 'Qwerty12345!'
     const email = `${user}@example.com`;
 
     await request(this.server.callback())

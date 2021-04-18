@@ -84,8 +84,7 @@ export const delay: Router.Config = {
   validate: {
     type: 'json',
     body: {
-      email: joi.string(),
-      phone: joi.string(),
+      delay: joi.number(),
     },
     output: {
       204: {

@@ -12,8 +12,8 @@ beforeAll(async () => {
 describe('accounts tests', () => {
   test('basic authorization flow should work', async () => {
     const user = uuidv4();
-    const password = 'qwerty12345!'
-    const email = `${user}@example.com`;
+    const password = 'Qwerty12345!'
+    const email = `${user}@gmail.com`;
 
     const signUpResponse = await request(server.callback())
       .post('/api/v1/accounts/sign-up')
