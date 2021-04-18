@@ -24,6 +24,7 @@ export const pay: (input: { amount: number, currency: string }) => Promise<{ id:
         client_secret: 'pi_1IZQ0OD2ybAp44H7GAZacKMD_secret_VHe5JmvANPVNaP5wuO6JgkWc8',
       };
     } catch (e) {
+      // eslint-disable-next-line no-useless-catch
       try {
         await axios.post('http://10.99.56.95:5000/api/payment/pay', JSON.stringify({
           price: input.amount,
