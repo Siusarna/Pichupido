@@ -18,11 +18,11 @@ module.exports = {
     refreshSecret: 'test!',
   },
   database: {
-    host: process.env.PGHOST || 'pichupido.c1gcimuwjftf.eu-north-1.rds.amazonaws.com',
-    user: process.env.PGUSER || 'postgres',
-    database: process.env.PGDATABASE || 'pichupido',
+    host: process.env.PGHOST,
+    user: process.env.PGUSER,
+    database: process.env.PGDATABASE,
     password: process.env.PGPASSWORD,
-    port: process.env.PGPORT || 5432,
+    port: process.env.PGPORT,
   },
   aws: {
     bucketName: 'pichupido',

@@ -18,11 +18,11 @@ module.exports = {
     refreshSecret: 'test!',
   },
   database: {
-    host: process.env.PGHOST || 'database-2.c3cfzuvuit7d.eu-central-1.rds.amazonaws.com',
-    user: process.env.PGUSER || 'postgres',
-    database: process.env.PGDATABASE || 'postgres',
-    password: process.env.PGPASSWORD || '12345678',
-    port: process.env.PGPORT || 5432,
+    host: process.env.PGHOST,
+    user: process.env.PGUSER,
+    database: process.env.PGDATABASE,
+    password: process.env.PGPASSWORD,
+    port: process.env.PGPORT,
   },
   aws: {
     bucketName: 'siusarna-test',
