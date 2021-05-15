@@ -26,7 +26,7 @@ describe('accounts tests', () => {
         lastName: 'Petrenko',
         role: 'admin'
       });
-
+    console.log(signUpResponse);
     expect(signUpResponse.status).toBe(204);
 
     const signInResponse = await request(server.callback())
