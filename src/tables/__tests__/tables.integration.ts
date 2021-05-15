@@ -38,7 +38,7 @@ describe('tables tests', () => {
     const responseDelete = await request(server.callback())
       .delete(`/api/v1/restaurants/${restaurantId}/tables/${id}`)
       .set('Cookie', cookies);
-    expect(responseDelete.status).toBe(204);
+    expect(responseDelete.status).toBe(200);
 
     await tempResCreator.deleteRestaurant(cookies, restaurantId);
     await tempResCreator.deleteAcc(cookies);

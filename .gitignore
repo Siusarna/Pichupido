@@ -2,6 +2,7 @@ build
 node_modules
 .idea
 /config/default.ts
+./test-report.html
 
 # stryker temp files
 .stryker-tmp
