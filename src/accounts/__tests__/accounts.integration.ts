@@ -38,6 +38,7 @@ describe('accounts tests', () => {
       });
 
     expect(signInResponse.status).toBe(200);
+    console.log(signInResponse);
     const cookies = signInResponse.get('Set-Cookie');
     const profile = await request(server.callback())
       .get('/api/v1/accounts/profile')
